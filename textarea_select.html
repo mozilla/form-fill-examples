@@ -25,26 +25,6 @@
     <p><label>email: <input type="text" id="email" name="email" autocomplete="email"></label></p>
     <p><input type="submit"></p>
   </form>
-
-  <p><button id="btn">Add new input</button></p>
-
-  <form>
-    <p><input type="text" name="username"></p>
-    <p><input type="password" name="password"></p>
-    <p><input type="submit"></p>
-  </form>
-
-  <script>
-    var btn = document.getElementById('btn');
-    var form = document.getElementById('form');
-    var count = 1;
-
-    btn.onclick = function() {
-      var p = document.createElement('p');
-      p.innerHTML = '<label>new input ' + (count++) + ': <input type="text"></label>';
-      form.appendChild(p);
-    };
-  </script>
 </body>
 </html>
 
