@@ -141,7 +141,7 @@ var NameUtils = {
     // spelled out in the Korean alphabet (Hangul), although they do have a Han
     // equivalent as well.
 
-    let reCJK = new RegExp("[" + this.CJK_RANGE.join('') + "]");
+    let reCJK = new RegExp("[" + this.CJK_RANGE.join("") + "]");
     let previousWasCJK = false;
     let wordCount = 0;
 
@@ -170,7 +170,7 @@ var NameUtils = {
     // names (almost) never have a middle name.
 
     let reHangulName = new RegExp(
-      "^[" + this.HANGUL_RANGE.join('') + this.WHITESPACE.join('') + "]+$");
+      "^[" + this.HANGUL_RANGE.join("") + this.WHITESPACE.join("") + "]+$");
     let nameParts = {
       given: "",
       middle: "",
@@ -230,7 +230,7 @@ var NameUtils = {
     }
 
     // Don't assume "Ma" is a suffix in John Ma.
-    if (nameTokens.length  > 2) {
+    if (nameTokens.length > 2) {
       nameTokens = this._stripSuffixes(nameTokens);
     }
 
