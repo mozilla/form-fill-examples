@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Name field utils</title>
+  <script src="name_utils.js"></script>
+  <style>
+    #message p {
+      color: lightgray;
+    }
+
+    #message p:first-child {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    <input type="text" id="fullname" name="fullname">
+    <button id="testSplit">Split name</button>
+  </p>
+  <div id="message"></div>
+
+  <script>
+    let $ = id => document.getElementById(id);
+
+    function log() {
+      let message = Array.from(arguments).map(arg => {
+        if (typeof arg === "object") {
+          return JSON.stringify(arg);
+        }
+        return arg;
+      }).join(", ");
+
+      let p = document.createElement("p");
+      p.textContent = message;
+      $("message").insertBefore(p, $("message").firstChild);
+
+      console.log.apply(console, arguments);
+    }
+
+    $("testSplit").addEventListener("click", () => {
+      let fullname = $("fullname");
+      fullname.select()
+      fullname.focus();
+      log(NameUtils.splitName(fullname.value));
+    });
+
+    $("fullname").addEventListener("keydown", evt => {
+      if (evt.keyCode == 13) {
+        $("testSplit").click();
+        evt.preventDefault();
+      }
+    });
+
+    $("fullname").select()
+    $("fullname").focus();
+  </script>
+</body>
+</html>
