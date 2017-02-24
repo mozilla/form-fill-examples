@@ -16,8 +16,14 @@
 </head>
 <body>
   <p>
-    <input type="text" id="fullname" name="fullname">
+    <input type="text" id="fullname" name="fullname" autofocus>
     <button id="testSplit">Split name</button>
+  </p>
+  <p>
+    <input type="text" id="given" name="given">
+    <input type="text" id="middle" name="middle">
+    <input type="text" id="family" name="family">
+    <button id="testJoin">Join name parts</button>
   </p>
   <div id="message"></div>
 
@@ -30,7 +36,7 @@
           return JSON.stringify(arg);
         }
         return arg;
-      }).join(", ");
+      }).join(" ");
 
       let p = document.createElement("p");
       p.textContent = message;
@@ -41,20 +47,31 @@
 
     $("testSplit").addEventListener("click", () => {
       let fullname = $("fullname");
-      fullname.select()
+      let nameParts = NameUtils.splitName(fullname.value);
       fullname.focus();
-      log(NameUtils.splitName(fullname.value));
+      log(fullname.value, "->", nameParts);
     });
 
-    $("fullname").addEventListener("keydown", evt => {
+    $("testJoin").addEventListener("click", () => {
+      let nameParts = {};
+      ["given", "middle", "family"].forEach(id => nameParts[id] = $(id).value);
+      let fullName = NameUtils.joinNameParts(nameParts);
+      log(nameParts, "->", fullName);
+      $("given").focus();
+    });
+
+    let clickButton = evt => {
       if (evt.keyCode == 13) {
-        $("testSplit").click();
+        evt.target.parentNode.querySelector("button").click();
         evt.preventDefault();
       }
-    });
+    };
 
-    $("fullname").select()
-    $("fullname").focus();
+    ["fullname", "given", "middle", "family"].forEach(id => {
+      let input = $(id);
+      input.addEventListener("keydown", clickButton);
+      input.addEventListener("focus", evt => evt.target.select());
+    });
   </script>
 </body>
 </html>
