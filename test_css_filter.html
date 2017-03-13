@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test CSS Filter</title>
+  <style>
+    fieldset {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+    }
+
+    fieldset.unthemed input, fieldset.unthemed select, fieldset.unthemed textarea {
+      background-color: white;
+    }
+
+    fieldset.styled {
+      background-color: black;
+    }
+
+    fieldset.styled legend {
+      color: #bbb;
+    }
+
+    fieldset.styled input, fieldset.styled select, fieldset.styled textarea {
+      background-color: black;
+      color: white;
+    }
+
+    .result {
+      margin: 1em 0 2em 0;
+    }
+
+    .controls label, .controls input {
+      vertical-align: middle;
+    }
+
+    label > span {
+      display: inline-block;
+      width: 5em;
+    }
+
+    input[type=range] {
+      width: 300px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      let filters = {};
+
+      function changeFilter() {
+        let order = [];
+        $('.controls input[type=range]').each(function() {
+          order.push($(this).prop('name'));
+        });
+
+        let filter = order.map(key => key + '(' + filters[key] + ')').join(' ');
+        $('.samples').find('input, textarea, select').css('filter', filter);
+        $('.result').text('filter: '+ filter);
+      }
+
+      $('.controls input[type=range]').on('input', function() {
+        let name = $(this).prop('name');
+        let value = $(this).val();
+
+        switch(name) {
+          case 'hue-rotate':
+            value +='deg';
+            break;
+          default:
+            value += '%';
+        }
+
+        filters[name] = value;
+        $(this).parents('p').children('span').text(value);
+        changeFilter();
+      }).trigger('input');
+
+      $('input[type=reset]').click(function() {
+        setTimeout(function() {
+          $('.controls p input').trigger('input');
+        });
+      });
+
+      $('.controls div').sortable({
+        stop: changeFilter
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="samples">
+    <fieldset>
+      <legend>Themed</legend>
+      <p><input value="Sample Text"></p>
+      <p><textarea>Sample Text</textarea></p>
+      <p>
+        <select>
+          <option>Sample Text</option>
+        </select>
+      </p>
+    </fieldset>
+    <fieldset class="unthemed">
+      <legend>Unthemed</legend>
+      <p><input value="Sample Text"></p>
+      <p><textarea>Sample Text</textarea></p>
+      <p>
+        <select>
+          <option>Sample Text</option>
+        </select>
+      </p>
+    </fieldset>
+    <fieldset class="styled">
+      <legend>Styled</legend>
+      <p><input value="Sample Text"></p>
+      <p><textarea>Sample Text</textarea></p>
+      <p>
+        <select>
+          <option>Sample Text</option>
+        </select>
+      </p>
+    </fieldset>
+  </div>
+  <div class="result"></div>
+  <form class="controls">
+    <div>
+      <p>
+        <label>
+          <span>sepia:</span>
+          <input type="range" name="sepia" min="0" max="100" value="0">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>brightness:</span>
+          <input type="range" name="brightness" min="0" max="100" value="100">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>contrast:</span>
+          <input type="range" name="contrast" min="0" max="500" value="100">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>grayscale:</span>
+          <input type="range" name="grayscale" min="0" max="100" value="0">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>hue-rotate:</span>
+          <input type="range" name="hue-rotate" min="0" max="359" value="0">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>invert:</span>
+          <input type="range" name="invert" min="0" max="100" value="0">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>opacity:</span>
+          <input type="range" name="opacity" min="0" max="100" value="100">
+        </label>
+        <span></span>
+      </p>
+      <p>
+        <label>
+          <span>saturate:</span>
+          <input type="range" name="saturate" min="0" max="500" value="100">
+        </label>
+        <span></span>
+      </p>
+    </div>
+    <input type="reset">
+  </form>
+</body>
+</html>
