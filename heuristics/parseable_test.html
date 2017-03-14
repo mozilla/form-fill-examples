@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Autofill Demo Page</title>
+</head>
+<style>
+.formbox {
+  display:inline-flex;
+  align-content:flex-start;
+  flex-wrap:wrap;
+  width:280px;
+  height: 100%;
+  margin:5px 5px 40px;
+  border:1px solid #000;
+  vertical-align: top;
+  padding: 8px;
+} 
+</style>
+<body>
+  <h1>Form Autofill Demo Page</h1>
+  <ul>
+  </ul>
+  <div>
+    <div class="formbox"><form id="form_A">
+    <h2>Form A</h2>
+    <h4>with label text only</h4>
+    <hr>
+    <p><label>organization: <input type="text" autofocus></label></p>
+    <p><label>streetAddress: <input type="text"></label></p>
+    <p><label>addressLevel2: <input type="text"></label></p>
+    <p><label>addressLevel1: <input type="text"></label></p>
+    <p><label>postalCode: <input type="text"></label></p>
+    <p><label>country: <input type="text"></label></p>
+    <p><label>phone: <input type="text"></label></p>
+    <p><label>email: <input type="text"></label></p>
+    <p><input type="submit"></p>
+    <p><button type="reset">Reset</button></p>
+    </form></div>
+
+    <div class="formbox"><form id="form_B">
+    <h2>Form B</h2>
+    <h4>with "name" attr in input only</h4>
+    <hr>
+    <p><label>o_r_g_a_nization: <input type="text" name="organization" autofocus></label></p>
+    <p><label>s_t_r_e_etAddress: <input type="text" name="street-address"></label></p>
+    <p><label>a_d_d_r_essLevel2: <input type="text" name="address-level2"></label></p>
+    <p><label>a_d_d_r_essLevel1: <input type="text" name="address-level1"></label></p>
+    <p><label>p_o_s_t_alCode: <input type="text" name="postal-code"></label></p>
+    <p><label>c_o_u_n_try: <input type="text" name="country"></label></p>
+    <p><label>p_h_o_n_e: <input type="text" name="tel"></label></p>
+    <p><label>e_m_a_i_l: <input type="text" name="email"></label></p>
+    <p><input type="submit"></p>
+    <p><button type="reset">Reset</button></p>
+    </form></div>
+
+    <div class="formbox"><form id="form_C">
+    <h2>Form C</h2>
+    <h4>with "id" attr in input only</h4>
+    <hr>
+    <p><label>o_r_g_a_nization: <input type="text" id="organization" autofocus></label></p>
+    <p><label>s_t_r_e_etAddress: <input type="text" id="street-address"></label></p>
+    <p><label>a_d_d_r_essLevel2: <input type="text" id="address-level2"></label></p>
+    <p><label>a_d_d_r_essLevel1: <input type="text" id="address-level1"></label></p>
+    <p><label>p_o_s_t_alCode: <input type="text" id="postal-code"></label></p>
+    <p><label>c_o_u_n_try: <input type="text" id="country"></label></p>
+    <p><label>p_h_o_n_e: <input type="text" id="tel"></label></p>
+    <p><label>e_m_a_i_l: <input type="text" id="email"></label></p>
+    <p><input type="submit"></p>
+    <p><button type="reset">Reset</button></p>
+    </form></div>
+
+    <div class="formbox"><form id="form_D">
+    <h2>Form D</h2>
+    <h4>with "class" attr in input only</h4>
+    <hr>
+    <p><label>o_r_g_a_nization: <input type="text" class="organization" autofocus></label></p>
+    <p><label>s_t_r_e_etAddress: <input type="text" class="street-address"></label></p>
+    <p><label>a_d_d_r_essLevel2: <input type="text" class="address-level2"></label></p>
+    <p><label>a_d_d_r_essLevel1: <input type="text" class="address-level1"></label></p>
+    <p><label>p_o_s_t_alCode: <input type="text" class="postal-code"></label></p>
+    <p><label>c_o_u_n_try: <input type="text" class="country"></label></p>
+    <p><label>p_h_o_n_e: <input type="text" class="tel"></label></p>
+    <p><label>e_m_a_i_l: <input type="text" class="email"></label></p>
+    <p><input type="submit"></p>
+    <p><button type="reset">Reset</button></p>
+    </form></div>
+</div>
+  <p><button id="btn">Add new input</button></p>
+
+  <form>
+    <p><input type="text" id="username" name="username"></p>
+    <p><input type="password" id="password" name="password"></p>
+    <p><input type="submit"></p>
+  </form>
+
+  <script>
+    var btn = document.getElementById('btn');
+    var form = document.getElementById('form');
+    var count = 1;
+
+    btn.onclick = function() {
+      var p = document.createElement('p');
+      p.innerHTML = '<label>new input ' + (count++) + ': <input type="text"></label>';
+      form.appendChild(p);
+    };
+  </script>
+</body>
+</html>
+
