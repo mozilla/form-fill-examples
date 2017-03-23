@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta feature="9.1.4">
+      <title>Costco - Payment</title>
+      <meta name="currentBuildNumber" content="3.0.29057.0">
+      <meta name="ServerName" content="www.costco.com ">
+      <meta name="LocalAddress" content="xxx.xxx.xxx.48">
+      <meta name="LocalName" content="TP26">
+   </head>
+   <body class="no-breadcrumbs" waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2="SA password protect entry checker">
+      <form class="" name="CheckoutPaymentForm" style="margin-top: 5px; overflow: hidden;" id="CheckoutPaymentForm" method="post" action="https://www.costco.com/CostcoBillingPayment">
+         <input type="hidden" name="selfAddressId" id="hiddenSelfAddressId" value="">
+         <input type="hidden" id="billHiddenInput0" name="billHideenInput" value="">
+         <input type="hidden" id="billAddrId" name="billAddrId" value="">
+         <input type="hidden" id="membershipNumber" name="membershipNum">
+         <input type="hidden" name="orderItemsCount" value="1">
+         <input type="hidden" value="" id="selectedAddressId" name="selectedAddressId">
+         <input type="hidden" name="orderId" value="644156669" id="WC_CheckoutPaymentsAndBillingAddressf_orderId">
+         <input type="hidden" name="storeId" value="10301" id="CheckoutPayment_inputs_1">
+         <input type="hidden" name="catalogId" value="10701" id="CheckoutPayment_inputs_2">
+         <input type="hidden" name="langId" value="-1" id="CheckoutPayment_inputs_3">
+         <input type="hidden" name="curr_year" value="2017" id="CheckoutPayment_inputs_5">
+         <input type="hidden" name="curr_month" value="3" id="CheckoutPayment_inputs_6">
+         <input type="hidden" name="curr_date" value="19" id="CheckoutPayment_inputs_7">
+         <input type="hidden" name="URL" value="OrderPrepare?URL=CheckoutReviewView">
+         <input type="hidden" name="xCreditCardId" value="">
+         <input type="hidden" name="ccLastFour" value="">
+         <input type="hidden" name="checkCCValue" value="false">		
+         <input type="hidden" name="backURL" value="">			
+         <input type="hidden" name="piAmount" value="84.99000">
+         <input type="hidden" name="cardNumberValueHolder" value="">	
+         <input type="hidden" name="authToken" value="312404731%2cKsqvty%2bpMJ%2bCAl3XeIkCxSEgLa4%3d">					
+         <div class="payment-method-no-amex">
+            <label class="payment-type" for="billMeLater">
+            <input type="radio" checked="checked" id="billMeLater" name="billMeLater" value="no" style="display: none;" title="overall type: UNKNOWN_TYPE
+               server type: NO_SERVER_DATA
+               heuristic type: UNKNOWN_TYPE
+               label: Payment Method
+               parseable name: billMeLater
+               field signature: 1700925171
+               form signature: 4979691664972472743" autofill-prediction="UNKNOWN_TYPE">
+            </label>
+            <br>
+            <div class="form-item-row">
+               <div class="form-item">
+                  <label class="label-font" for="payMethodId">Card Type</label>
+                  <select name="payMethodId" id="payMethodId" aria-describedby="payMethodId_validation" title="overall type: CREDIT_CARD_TYPE
+                     server type: CREDIT_CARD_TYPE
+                     heuristic type: CREDIT_CARD_TYPE
+                     label: Card Type
+                     parseable name: payMethodId
+                     field signature: 3668211827
+                     form signature: 4979691664972472743" autofill-prediction="CREDIT_CARD_TYPE">
+                     <option value="Costco Credit Card">Costco Credit Card</option>
+                     <option value="Discover">Discover</option>
+                     <option value="Master Card">MasterCard</option>
+                     <option value="VISA" selected="selected">VISA</option>
+                  </select>
+               </div>
+               <div class="form-item">
+                  <label class="label-font" for="account">Card number</label>
+                  <input title="overall type: CREDIT_CARD_NUMBER
+                     server type: NO_SERVER_DATA
+                     heuristic type: CREDIT_CARD_NUMBER
+                     label: Card number
+                     parseable name: account
+                     field signature: 3715653537
+                     form signature: 4979691664972472743" type="text" id="account" aria-describedby="account_validation" name="account" value="" onchange="checkCCValueChange()" autocomplete="off" autofill-prediction="CREDIT_CARD_NUMBER">
+               </div>
+            </div>
+            <div class="form-item-row cc-expiry-cvv">
+               <div class="form-item multi-inline date-selects">
+                  <label class="label-font" for="expire_month">Expiration Date</label>
+                  <select title="overall type: CREDIT_CARD_EXP_MONTH
+                     server type: CREDIT_CARD_EXP_MONTH
+                     heuristic type: CREDIT_CARD_EXP_MONTH
+                     label: Expiration Date
+                     parseable name: expire_month
+                     field signature: 3078539387
+                     form signature: 4979691664972472743" id="expire_month" aria-describedby="expire_month_validation" name="expire_month" autofill-prediction="CREDIT_CARD_EXP_MONTH">
+                     <option value="Month">Month</option>
+                     <option value="01">1</option>
+                     <option value="02">2</option>
+                     <option value="03">3</option>
+                     <option value="04">4</option>
+                     <option value="05">5</option>
+                     <option value="06">6</option>
+                     <option value="07">7</option>
+                     <option value="08">8</option>
+                     <option value="09">9</option>
+                     <option value="10">10</option>
+                     <option value="11">11</option>
+                     <option value="12">12</option>
+                  </select>
+                  <select title="overall type: CREDIT_CARD_EXP_4_DIGIT_YEAR
+                     server type: CREDIT_CARD_EXP_4_DIGIT_YEAR
+                     heuristic type: CREDIT_CARD_EXP_4_DIGIT_YEAR
+                     label: Expiration Date
+                     parseable name: expire_year
+                     field signature: 2521850425
+                     form signature: 4979691664972472743" name="expire_year" aria-describedby="expire_year_validation" autofill-prediction="CREDIT_CARD_EXP_4_DIGIT_YEAR">
+                     <option value="Year">Year</option>
+                     <option value="2017">2017</option>
+                     <option value="2018">2018</option>
+                     <option value="2019">2019</option>
+                     <option value="2020">2020</option>
+                     <option value="2021">2021</option>
+                     <option value="2022">2022</option>
+                     <option value="2023">2023</option>
+                     <option value="2024">2024</option>
+                     <option value="2025">2025</option>
+                     <option value="2026">2026</option>
+                     <option value="2027">2027</option>
+                  </select>
+               </div>
+               <div class="form-item col2 cvv nowrap">
+                  <label class="label-font" for="cc_cvc">CVV Code</label>
+                  <input title="overall type: CREDIT_CARD_VERIFICATION_CODE
+                     server type: NO_SERVER_DATA
+                     heuristic type: CREDIT_CARD_VERIFICATION_CODE
+                     label: CVV Code
+                     parseable name: cc_cvc
+                     field signature: 1956128288
+                     form signature: 4979691664972472743" type="text" id="cc_cvc" aria-describedby="cc_cvc_validation" name="cc_cvc" value="" maxlength="4" autocomplete="off" autofill-prediction="CREDIT_CARD_VERIFICATION_CODE">									
+                  <span class="html-tooltip has-tooltip cvv-flag">&nbsp;<span class="tooltip">?</span></span>
+               </div>
+            </div>
+            <div class="form-item">
+               <label class="label-font" for="cc_nameoncard">Cardholder Name</label>
+               <input title="overall type: CREDIT_CARD_NAME_FULL
+                  server type: CREDIT_CARD_NAME_FULL
+                  heuristic type: CREDIT_CARD_NAME_FULL
+                  label: Cardholder Name
+                  parseable name: cc_nameoncard
+                  field signature: 1086986730
+                  form signature: 4979691664972472743" type="text" id="cc_nameoncard" aria-describedby="cc_nameoncard_validation" name="cc_nameoncard" value="" autocomplete="off" autofill-prediction="CREDIT_CARD_NAME_FULL">
+            </div>
+            <div class="form-item">
+               <input title="overall type: UNKNOWN_TYPE
+                  server type: NO_SERVER_DATA
+                  heuristic type: UNKNOWN_TYPE
+                  label: Save this as my default payment card
+                  parseable name: save_CC
+                  field signature: 3060743727
+                  form signature: 4979691664972472743" type="checkbox" name="save_CC" id="save_CC" autofill-prediction="UNKNOWN_TYPE">
+               <label for="save_CC">Save this as my default payment card</label>
+            </div>
+         </div>
+      </form>
+      <form style="padding:15px;" name="CashCardForm" method="post" action="https://www.costco.com/CostcoCashCardProcess" id="CashCardForm">
+         <input type="hidden" name="storeId" value="10301">
+         <input type="hidden" name="langId" value="-1">
+         <input type="hidden" name="orderId" value="644156669">
+         <input type="hidden" name="catalogId" value="10701">
+         <input type="hidden" name="addressId" value="">
+         <input type="hidden" name="cc_payMethodId" value="CostcoCashCard">									
+         <input type="hidden" name="action" value="">
+         <input type="hidden" name="URL" value="CheckoutPaymentView">
+         <input type="hidden" name="account" value="">
+         <input type="hidden" name="expire_month" value="">
+         <input type="hidden" name="expire_year" value="">
+         <input type="hidden" name="cc_nameoncard" value="">
+         <input type="hidden" name="payMethodId" value="">			
+         <input type="hidden" name="xCreditCardId" value="">
+         <input type="hidden" name="ccLastFour" value="">		
+         <input type="hidden" name="authToken" value="312404731%2cKsqvty%2bpMJ%2bCAl3XeIkCxSEgLa4%3d">
+         <div class="form-item-row">
+            <div class="form-item">
+               <label class="label-font" for="cash_account">Costco Cash Card Number</label>
+               <input title="Costco Cash Card Number" type="text" id="cash_account" name="cash_account" value="" maxlength="19" autocomplete="off">
+            </div>
+            <div class="form-item" style="width:150px">
+               <label class="label-font" for="cash_pin">PIN</label>
+               <input title="PIN" type="password" id="cash_pin" name="cash_pin" value="" style="width:60px;" maxlength="8" autocomplete="off">
+               <span class="html-tooltip has-tooltip">&nbsp;<span class="tooltip">?</span></span>
+               <div class="tooltip">
+                  <span class="tooltip-heading">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More Info - Costco Cash Card</span><br><br>
+                  <span class="tooltip-subheading"> <i>Costco Cash</i> Card Number</span><br>
+                  <span class="tooltip-content-info">This image highlights the unique number</span><br>
+                  <img class="tooltip-content-right" src="./Costco - Payment_files/cashcard-us.gif" alt="cashcard-us.gif">
+                  <span class="tooltip-content-info">used to identify your <i>Costco Cash</i> card.</span><br><br>
+                  <span class="tooltip-subheading"> Pin Number</span><br>
+                  <span class="tooltip-content-info">This number is used to access your</span><br>
+                  <span class="tooltip-content-info"><i>Costco Cash</i> card. The image shows</span><br>
+                  <span class="tooltip-content-info">where this number is located.</span><br><br>
+                  <span class="tooltip-footer">@ 1998-2016 Costco Wholesale Corporation. All rights reserved.</span>
+               </div>
+            </div>
+         </div>
+      </form>
+      <form name="RefreshBilling" method="post" action="https://www.costco.com/CostcoBillingPayment" id="RefreshBilling">
+         <input type="hidden" name="storeId" value="10301">
+         <input type="hidden" name="langId" value="-1">
+         <input type="hidden" name="orderId" value="644156669">
+         <input type="hidden" name="catalogId" value="10701">
+         <input type="hidden" name="actionType" value="refresh">
+         <input type="hidden" name="authToken" value="312404731%2cKsqvty%2bpMJ%2bCAl3XeIkCxSEgLa4%3d">
+         <input type="hidden" name="deviceId" value="">
+      </form>
+      <form style="padding:15px;" name="PromotionCodeForm" method="post" action="https://www.costco.com/CostcoManagePromotionCmd" id="PromotionCodeForm">
+         <input type="hidden" name="storeId" value="10301">
+         <input type="hidden" name="langId" value="-1">
+         <input type="hidden" name="orderId" value="644156669">
+         <input type="hidden" name="catalogId" value="10701">
+         <input type="hidden" name="taskType" value="A">
+         <input type="hidden" name="URL" value="OrderCalculate?updatePrices=1&amp;calculationUsageId=-1&amp;URL=OrderPrepare?URL=CostcoPostPromotionCodeAddRemove&amp;orderId=.">
+         <input type="hidden" name="errorViewName" value="CheckoutPaymentView">
+         <input type="hidden" name="account" value="">
+         <input type="hidden" name="expire_month" value="">
+         <input type="hidden" name="expire_year" value="">
+         <input type="hidden" name="cc_nameoncard" value="">
+         <input type="hidden" name="payMethodId" value="">
+         <input type="hidden" name="xCreditCardId" value="">
+         <input type="hidden" name="ccLastFour" value="">		
+         <input type="hidden" name="checkCCValue" value="false">
+         <input type="hidden" id="billHiddenInput0" name="billHideenInput" value="">
+         <input type="hidden" id="billAddrId" name="billAddrId" value="">
+         <input type="hidden" name="addressId" value="">
+         <input type="hidden" name="cc_cvc" value="">
+         <input type="hidden" name="piAmount" value="84.99000">
+         <div class="form-item">
+            <label class="label-font" for="PromotionCodeForm_1">Promo Code</label>
+            <input title="Promo Code" type="text" size="10" name="promoCode" id="PromotionCodeForm_1" value="">
+         </div>
+      </form>
+      <form id="AddressFormModal-Form" name="AddressFormModal-Form" autocomplete="on" method="post">
+         <div class="addressFormModalWrap" style="margin: 0 13px 0 13px;">
+            <input type="hidden" name="addressType" value="B">
+            <p id="addressFormModalRequired" tabindex="-1" style="margin-bottom: 6px;"><span class="asterisk">*</span> Required fields</p>
+            <div class="form-item-row" id="personName" style="overflow: auto;">
+               <div class="form-item">
+                  <label for="addressFormModalFirstName">FIRST NAME<span class="asterisk">*</span></label>
+                  <input id="addressFormModalFirstName" name="addressFormModalFirstName" title="overall type: NAME_FIRST
+                     server type: NAME_FIRST
+                     heuristic type: NAME_FIRST
+                     label: FIRST NAME*
+                     parseable name: addressFormModalFirstName
+                     field signature: 2222266781
+                     form signature: 8397269939060577503" type="text" maxlength="40" style="width: 140px;" autofill-prediction="NAME_FIRST">
+               </div>
+               <div class="form-item">
+                  <label for="addressFormModalMiddleInitial">M.I.</label>
+                  <input id="addressFormModalMiddleInitial" name="addressFormModalMiddleInitial" title="overall type: NAME_MIDDLE_INITIAL
+                     server type: NAME_MIDDLE_INITIAL
+                     heuristic type: NAME_MIDDLE_INITIAL
+                     label: M.I.
+                     parseable name: addressFormModalMiddleInitial
+                     field signature: 3540652809
+                     form signature: 8397269939060577503" type="text" class="miField" maxlength="1" style="width: 26px;" autofill-prediction="NAME_MIDDLE_INITIAL">
+               </div>
+               <div class="form-item">
+                  <label for="addressFormModalLastName">LAST NAME<span class="asterisk">*</span></label>
+                  <input id="addressFormModalLastName" name="addressFormModalLastName" title="overall type: NAME_LAST
+                     server type: NAME_LAST
+                     heuristic type: NAME_LAST
+                     label: LAST NAME*
+                     parseable name: addressFormModalLastName
+                     field signature: 4218996568
+                     form signature: 8397269939060577503" type="text" maxlength="40" style="width: 140px;" autofill-prediction="NAME_LAST">
+               </div>
+            </div>
+            <div class="form-item">
+               <label for="addressFormModalCompany">COMPANY NAME</label>
+               <input id="addressFormModalCompany" name="addressFormModalCompany" type="text" maxlength="40" style="width: 265px" title="overall type: COMPANY_NAME
+                  server type: COMPANY_NAME
+                  heuristic type: COMPANY_NAME
+                  label: COMPANY NAME
+                  parseable name: addressFormModalCompany
+                  field signature: 1845178698
+                  form signature: 8397269939060577503" autofill-prediction="COMPANY_NAME">
+            </div>
+            <div class="form-item">
+               <label for="addressFormModalCountry">COUNTRY<span class="asterisk">*</span></label>
+               <select addresstype="B" id="addressFormModalCountry" name="addressFormModalCountry" class="country_select" style="width: 277px;font-size:13px;" title="overall type: ADDRESS_HOME_COUNTRY
+                  server type: ADDRESS_HOME_COUNTRY
+                  heuristic type: ADDRESS_HOME_COUNTRY
+                  label: COUNTRY*
+                  parseable name: addressFormModalCountry
+                  field signature: 4052501735
+                  form signature: 8397269939060577503" autofill-prediction="ADDRESS_HOME_COUNTRY">
+                  <option value="CA">Canada</option>
+                  <option value="US">United States</option>
+               </select>
+            </div>
+            <div class="form-item" id="streetAddress">
+               <legend><label for="addressFormModalAddressLine1">STREET ADDRESS<span class="asterisk">*</span></label></legend>
+               <div>
+                  <input id="addressFormModalAddressLine1" name="addressFormModalAddressLine1" placeholder="Address Line 1" type="text" maxlength="30" title="overall type: ADDRESS_HOME_LINE1
+                     server type: ADDRESS_HOME_LINE1
+                     heuristic type: ADDRESS_HOME_LINE1
+                     label: STREET ADDRESS*
+                     parseable name: addressFormModalAddressLine1
+                     field signature: 1532865404
+                     form signature: 8397269939060577503" style="width: 265px;" autofill-prediction="ADDRESS_HOME_LINE1">
+               </div>
+               <div style="margin-top:6px;">
+                  <input id="addressFormModalAddressLine2" name="addressFormModalAddressLine2" placeholder="Address Line 2" type="text" maxlength="30" title="overall type: ADDRESS_HOME_LINE2
+                     server type: ADDRESS_HOME_LINE2
+                     heuristic type: ADDRESS_HOME_LINE2
+                     label: Address Line 2
+                     parseable name: addressFormModalAddressLine2
+                     field signature: 2315514959
+                     form signature: 8397269939060577503" style="width: 265px;" autofill-prediction="ADDRESS_HOME_LINE2">
+               </div>
+            </div>
+            <div class="form-item" id="city">
+               <label for="addressFormModalCity">CITY<span class="asterisk">*</span></label>
+               <input id="addressFormModalCity" name="addressFormModalCity" type="text" maxlength="40" style="width: 265px" title="overall type: ADDRESS_HOME_CITY
+                  server type: ADDRESS_HOME_CITY
+                  heuristic type: ADDRESS_HOME_CITY
+                  label: CITY*
+                  parseable name: addressFormModalCity
+                  field signature: 4130865920
+                  form signature: 8397269939060577503" autofill-prediction="ADDRESS_HOME_CITY">
+            </div>
+            <div id="stateAndZip" class="form-item-row">
+               <div class="form-item">
+                  <label for="addressFormModalState">STATE / PROVINCE<span class="asterisk">*</span></label>
+                  <select addresstype="B" id="addressFormModalState" name="addressFormModalState" class="state_select" style="width: 150px; font-size: 13px;" title="overall type: ADDRESS_HOME_STATE
+                     server type: ADDRESS_HOME_STATE
+                     heuristic type: ADDRESS_HOME_STATE
+                     label: STATE / PROVINCE*
+                     parseable name: addressFormModalState
+                     field signature: 4026908515
+                     form signature: 8397269939060577503" autofill-prediction="ADDRESS_HOME_STATE">
+                     <option value="NO_STATE_TYPE_SELECTED" selected="selected" class="form-dropDownSelectionForceBlack">* Select</option>
+                     <option value="Aa" class="form-dropDownSelectionForceBlack">AA - Armed Forces America</option>
+                     <option value="Ae" class="form-dropDownSelectionForceBlack">AE - Armed Forces Europe</option>
+                     <option value="AL" class="form-dropDownSelectionForceBlack">Alabama</option>
+                     <option value="AK" class="form-dropDownSelectionForceBlack">Alaska</option>
+                     <option value="Ap" class="form-dropDownSelectionForceBlack">AP - Armed Forces Pacific</option>
+                     <option value="AZ" class="form-dropDownSelectionForceBlack">Arizona</option>
+                     <option value="AR" class="form-dropDownSelectionForceBlack">Arkansas</option>
+                     <option value="CA" class="form-dropDownSelectionForceBlack">California</option>
+                     <option value="CO" class="form-dropDownSelectionForceBlack">Colorado</option>
+                     <option value="CT" class="form-dropDownSelectionForceBlack">Connecticut</option>
+                     <option value="DE" class="form-dropDownSelectionForceBlack">Delaware</option>
+                     <option value="DC" class="form-dropDownSelectionForceBlack">District of Columbia</option>
+                     <option value="FL" class="form-dropDownSelectionForceBlack">Florida</option>
+                     <option value="GA" class="form-dropDownSelectionForceBlack">Georgia</option>
+                     <option value="HI" class="form-dropDownSelectionForceBlack">Hawaii</option>
+                     <option value="ID" class="form-dropDownSelectionForceBlack">Idaho</option>
+                     <option value="IL" class="form-dropDownSelectionForceBlack">Illinois</option>
+                     <option value="IN" class="form-dropDownSelectionForceBlack">Indiana</option>
+                     <option value="IA" class="form-dropDownSelectionForceBlack">Iowa</option>
+                     <option value="KS" class="form-dropDownSelectionForceBlack">Kansas</option>
+                     <option value="KY" class="form-dropDownSelectionForceBlack">Kentucky</option>
+                     <option value="LA" class="form-dropDownSelectionForceBlack">Louisiana</option>
+                     <option value="ME" class="form-dropDownSelectionForceBlack">Maine</option>
+                     <option value="MD" class="form-dropDownSelectionForceBlack">Maryland</option>
+                     <option value="MA" class="form-dropDownSelectionForceBlack">Massachusetts</option>
+                     <option value="MI" class="form-dropDownSelectionForceBlack">Michigan</option>
+                     <option value="MN" class="form-dropDownSelectionForceBlack">Minnesota</option>
+                     <option value="MS" class="form-dropDownSelectionForceBlack">Mississippi</option>
+                     <option value="MO" class="form-dropDownSelectionForceBlack">Missouri</option>
+                     <option value="MT" class="form-dropDownSelectionForceBlack">Montana</option>
+                     <option value="NE" class="form-dropDownSelectionForceBlack">Nebraska</option>
+                     <option value="NV" class="form-dropDownSelectionForceBlack">Nevada</option>
+                     <option value="NH" class="form-dropDownSelectionForceBlack">New Hampshire</option>
+                     <option value="NJ" class="form-dropDownSelectionForceBlack">New Jersey</option>
+                     <option value="NM" class="form-dropDownSelectionForceBlack">New Mexico</option>
+                     <option value="NY" class="form-dropDownSelectionForceBlack">New York</option>
+                     <option value="NC" class="form-dropDownSelectionForceBlack">North Carolina</option>
+                     <option value="ND" class="form-dropDownSelectionForceBlack">North Dakota</option>
+                     <option value="OH" class="form-dropDownSelectionForceBlack">Ohio</option>
+                     <option value="OK" class="form-dropDownSelectionForceBlack">Oklahoma</option>
+                     <option value="OR" class="form-dropDownSelectionForceBlack">Oregon</option>
+                     <option value="PA" class="form-dropDownSelectionForceBlack">Pennsylvania</option>
+                     <option value="PR" class="form-dropDownSelectionForceBlack">Puerto Rico</option>
+                     <option value="RI" class="form-dropDownSelectionForceBlack">Rhode Island</option>
+                     <option value="SC" class="form-dropDownSelectionForceBlack">South Carolina</option>
+                     <option value="SD" class="form-dropDownSelectionForceBlack">South Dakota</option>
+                     <option value="TN" class="form-dropDownSelectionForceBlack">Tennessee</option>
+                     <option value="TX" class="form-dropDownSelectionForceBlack">Texas</option>
+                     <option value="UT" class="form-dropDownSelectionForceBlack">Utah</option>
+                     <option value="VT" class="form-dropDownSelectionForceBlack">Vermont</option>
+                     <option value="VA" class="form-dropDownSelectionForceBlack">Virginia</option>
+                     <option value="WA" class="form-dropDownSelectionForceBlack">Washington</option>
+                     <option value="WV" class="form-dropDownSelectionForceBlack">West Virginia</option>
+                     <option value="WI" class="form-dropDownSelectionForceBlack">Wisconsin</option>
+                     <option value="WY" class="form-dropDownSelectionForceBlack">Wyoming</option>
+                  </select>
+               </div>
+               <div class="form-item">
+                  <label for="addressFormModalZip">ZIP / POSTAL CODE<span class="asterisk">*</span></label>
+                  <input id="addressFormModalZip" name="addressFormModalZip" class="zipField" type="text" maxlength="10" style="width: 100px" title="overall type: ADDRESS_HOME_ZIP
+                     server type: ADDRESS_HOME_ZIP
+                     heuristic type: ADDRESS_HOME_ZIP
+                     label: ZIP / POSTAL CODE*
+                     parseable name: addressFormModalZip
+                     field signature: 2383002781
+                     form signature: 8397269939060577503" autofill-prediction="ADDRESS_HOME_ZIP">
+               </div>
+            </div>
+            <div class="form-item" id="phoneNumber">
+               <label for="addressFormModalPhoneNumber">PHONE NUMBER<span class="asterisk">*</span></label>
+               <input id="addressFormModalPhoneNumber" name="addressFormModalPhoneNumber" type="text" maxlength="32" style="width: 200px;" title="overall type: PHONE_HOME_CITY_AND_NUMBER
+                  server type: PHONE_HOME_CITY_AND_NUMBER
+                  heuristic type: PHONE_HOME_WHOLE_NUMBER
+                  label: PHONE NUMBER*
+                  parseable name: addressFormModalPhoneNumber
+                  field signature: 1884423068
+                  form signature: 8397269939060577503" autofill-prediction="PHONE_HOME_CITY_AND_NUMBER">
+            </div>
+            <div class="form-item" id="email">
+               <label for="addressFormModalEmail" id="addressFormModalEmailLabel">EMAIL<span class="asterisk">*</span></label>		
+               <input id="addressFormModalEmail" name="addressFormModalEmail" type="text" maxlength="40" style="width: 200px;" title="overall type: EMAIL_ADDRESS
+                  server type: EMAIL_ADDRESS
+                  heuristic type: EMAIL_ADDRESS
+                  label: EMAIL*
+                  parseable name: addressFormModalEmail
+                  field signature: 1977954575
+                  form signature: 8397269939060577503" autofill-prediction="EMAIL_ADDRESS">
+            </div>
+            <div class="form-item" id="addressNickname">
+               <label for="addressFormModalAddressNickName">ADDRESS NICKNAME<span class="asterisk">*</span><span class="has-tooltip html-tooltip nickname-tooltip">&nbsp;<span class="tooltip">?</span></span><span class="tooltip">The Address Nickname is a short name you create to help you easily identify this address within your address book.</span></label>
+               <input id="addressFormModalAddressNickName" name="addressFormModalAddressNickName" type="text" maxlength="35" placeholder="Holly at school, Mom, etc." style="width: 265px;" title="overall type: ADDRESS_HOME_STREET_ADDRESS
+                  server type: ADDRESS_HOME_STREET_ADDRESS
+                  heuristic type: UNKNOWN_TYPE
+                  label: ADDRESS NICKNAME* The Address Nickname is a short name you create to help you easily identify this a
+                  parseable name: addressFormModalAddressNickName
+                  field signature: 605446661
+                  form signature: 8397269939060577503" autofill-prediction="ADDRESS_HOME_STREET_ADDRESS">
+            </div>
+            <div class="form-item">
+               <input name="saveAddressCheckbox" id="saveAddressCheckbox" type="checkbox" onclick="javascript:AddressForm.enableSetDefault()" title="overall type: UNKNOWN_TYPE
+                  server type: NO_SERVER_DATA
+                  heuristic type: UNKNOWN_TYPE
+                  label: Add to address book.
+                  parseable name: saveAddressCheckbox
+                  field signature: 784127875
+                  form signature: 8397269939060577503" autofill-prediction="UNKNOWN_TYPE">
+               <label for="saveAddressCheckbox">Add to address book. </label>
+            </div>
+            <div class="form-item">
+               <input name="setDefaultCheckbox" id="setDefaultCheckbox" type="checkbox" disabled="true" title="overall type: UNKNOWN_TYPE
+                  server type: NO_SERVER_DATA
+                  heuristic type: UNKNOWN_TYPE
+                  label: Save as default shipping address in Address Book
+                  parseable name: setDefaultCheckbox
+                  field signature: 1479095059
+                  form signature: 8397269939060577503" autofill-prediction="UNKNOWN_TYPE">
+               <label for="setDefaultCheckbox" id="setDefaultCheckboxModalLabel">Save as default billing address in Address Book</label>
+            </div>
+         </div>
+      </form>
+      <form id="AddressFormInline-Form" name="AddressFormInline-Form" autocomplete="on" method="post">
+         <div class="addressFormInline-wrap">
+            <input type="hidden" name="addressType" value="B">
+            <p style="margin-bottom: 6px;" id="addressFormInlineRequired" tabindex="-1"><span class="asterisk">*</span> Required fields</p>
+            <div id="personName" style="overflow: auto;">
+               <div style="float: left; margin-right: 13px; width: 150px">
+                  <label for="addressFormInlineFirstName">FIRST NAME<span class="asterisk">*</span></label>
+                  <div style="margin-top: 6px;">
+                     <input id="addressFormInlineFirstName" name="addressFormInlineFirstName" title="overall type: NAME_FIRST
+                        server type: NAME_FIRST
+                        heuristic type: NAME_FIRST
+                        label: FIRST NAME*
+                        parseable name: addressFormInlineFirstName
+                        field signature: 3938958812
+                        form signature: 16870043504464996221" type="text" maxlength="40" style="width: 140px;" autofill-prediction="NAME_FIRST">
+                  </div>
+               </div>
+               <div style="float: left; margin-right: 15px">
+                  <label for="addressFormInlineMiddleInitial">M.I.</label>
+                  <div style="margin-top: 6px;">
+                     <input id="addressFormInlineMiddleInitial" name="addressFormInlineMiddleInitial" title="overall type: NAME_MIDDLE_INITIAL
+                        server type: NAME_MIDDLE_INITIAL
+                        heuristic type: NAME_MIDDLE_INITIAL
+                        label: M.I.
+                        parseable name: addressFormInlineMiddleInitial
+                        field signature: 3429701181
+                        form signature: 16870043504464996221" type="text" class="miField" maxlength="1" style="width: 26px;" autofill-prediction="NAME_MIDDLE_INITIAL">
+                  </div>
+               </div>
+               <div style="float: left; width: 150px">
+                  <label for="addressFormInlineLastName">LAST NAME<span class="asterisk">*</span></label>
+                  <div style="margin-top: 6px;">
+                     <input id="addressFormInlineLastName" name="addressFormInlineLastName" title="overall type: NAME_LAST
+                        server type: NAME_LAST
+                        heuristic type: NAME_LAST
+                        label: LAST NAME*
+                        parseable name: addressFormInlineLastName
+                        field signature: 2108416564
+                        form signature: 16870043504464996221" type="text" maxlength="40" style="width: 150px;" autofill-prediction="NAME_LAST">
+                  </div>
+               </div>
+            </div>
+            <div id="city" style="margin-top: 15px;">
+               <label for="addressFormInlineCompany">COMPANY NAME</label>
+               <div style="margin-top: 6px;">
+                  <input id="addressFormInlineCompany" name="addressFormInlineCompany" type="text" maxlength="40" style="width: 265px" title="overall type: COMPANY_NAME
+                     server type: COMPANY_NAME
+                     heuristic type: COMPANY_NAME
+                     label: COMPANY NAME
+                     parseable name: addressFormInlineCompany
+                     field signature: 4087238350
+                     form signature: 16870043504464996221" autofill-prediction="COMPANY_NAME">
+               </div>
+            </div>
+            <div style="display: inline-block; margin-top: 15px;">
+               <label for="addressFormInlineCountry">COUNTRY<span class="asterisk">*</span></label>
+               <div style="margin-top: 6px;">
+                  <select id="addressFormInlineCountry" class="country_select" name="addressFormInlineCountry" style="width: 277px;" title="overall type: ADDRESS_HOME_COUNTRY
+                     server type: ADDRESS_HOME_COUNTRY
+                     heuristic type: ADDRESS_HOME_COUNTRY
+                     label: COUNTRY*
+                     parseable name: addressFormInlineCountry
+                     field signature: 695762362
+                     form signature: 16870043504464996221" autofill-prediction="ADDRESS_HOME_COUNTRY">
+                     <option value="CA">Canada</option>
+                     <option value="US">United States</option>
+                  </select>
+               </div>
+            </div>
+            <div id="streetAddress" style="margin-top: 15px;">
+               <legend><label for="addressFormInlineAddressLine1">STREET ADDRESS<span class="asterisk">*</span></label></legend>
+               <div style="margin: 6px 0 6px">	
+                  <input id="addressFormInlineAddressLine1" name="addressFormInlineAddressLine1" placeholder="Address Line 1" type="text" maxlength="30" title="overall type: ADDRESS_HOME_LINE1
+                     server type: ADDRESS_HOME_LINE1
+                     heuristic type: ADDRESS_HOME_LINE1
+                     label: STREET ADDRESS*
+                     parseable name: addressFormInlineAddressLine1
+                     field signature: 1040409778
+                     form signature: 16870043504464996221" style="width: 265px;" autofill-prediction="ADDRESS_HOME_LINE1">
+               </div>
+               <input id="addressFormInlineAddressLine2" name="addressFormInlineAddressLine2" placeholder="Address Line 2" type="text" maxlength="30" title="overall type: ADDRESS_HOME_LINE2
+                  server type: ADDRESS_HOME_LINE2
+                  heuristic type: ADDRESS_HOME_LINE2
+                  label: Address Line 2
+                  parseable name: addressFormInlineAddressLine2
+                  field signature: 1640842807
+                  form signature: 16870043504464996221" style="width: 265px;" autofill-prediction="ADDRESS_HOME_LINE2">
+            </div>
+            <div id="city" style="margin-top: 15px;">
+               <label for="addressFormInlineCity">CITY<span class="asterisk">*</span></label>
+               <div style="margin-top: 6px;">
+                  <input id="addressFormInlineCity" name="addressFormInlineCity" type="text" maxlength="40" style="width: 265px" title="overall type: ADDRESS_HOME_CITY
+                     server type: ADDRESS_HOME_CITY
+                     heuristic type: ADDRESS_HOME_CITY
+                     label: CITY*
+                     parseable name: addressFormInlineCity
+                     field signature: 2829321141
+                     form signature: 16870043504464996221" autofill-prediction="ADDRESS_HOME_CITY">
+               </div>
+            </div>
+            <div id="state" style="overflow: auto; margin-top: 15px;">
+               <div style="float: left; margin-right: 15px;">
+                  <label for="addressFormInlineState">STATE / PROVINCE<span class="asterisk">*</span></label>
+                  <div style="margin-top: 6px; width: 150px;">
+                     <select addresstype="B" id="addressFormInlineState" name="addressFormInlineState" class="state_select" title="overall type: ADDRESS_HOME_STATE
+                        server type: ADDRESS_HOME_STATE
+                        heuristic type: ADDRESS_HOME_STATE
+                        label: STATE / PROVINCE*
+                        parseable name: addressFormInlineState
+                        field signature: 3295167441
+                        form signature: 16870043504464996221" autofill-prediction="ADDRESS_HOME_STATE">
+                        <option value="NO_STATE_TYPE_SELECTED" selected="selected" class="form-dropDownSelectionForceBlack">* Select</option>
+                        <option value="Aa" class="form-dropDownSelectionForceBlack">AA - Armed Forces America</option>
+                        <option value="Ae" class="form-dropDownSelectionForceBlack">AE - Armed Forces Europe</option>
+                        <option value="AL" class="form-dropDownSelectionForceBlack">Alabama</option>
+                        <option value="AK" class="form-dropDownSelectionForceBlack">Alaska</option>
+                        <option value="Ap" class="form-dropDownSelectionForceBlack">AP - Armed Forces Pacific</option>
+                        <option value="AZ" class="form-dropDownSelectionForceBlack">Arizona</option>
+                        <option value="AR" class="form-dropDownSelectionForceBlack">Arkansas</option>
+                        <option value="CA" class="form-dropDownSelectionForceBlack">California</option>
+                        <option value="CO" class="form-dropDownSelectionForceBlack">Colorado</option>
+                        <option value="CT" class="form-dropDownSelectionForceBlack">Connecticut</option>
+                        <option value="DE" class="form-dropDownSelectionForceBlack">Delaware</option>
+                        <option value="DC" class="form-dropDownSelectionForceBlack">District of Columbia</option>
+                        <option value="FL" class="form-dropDownSelectionForceBlack">Florida</option>
+                        <option value="GA" class="form-dropDownSelectionForceBlack">Georgia</option>
+                        <option value="HI" class="form-dropDownSelectionForceBlack">Hawaii</option>
+                        <option value="ID" class="form-dropDownSelectionForceBlack">Idaho</option>
+                        <option value="IL" class="form-dropDownSelectionForceBlack">Illinois</option>
+                        <option value="IN" class="form-dropDownSelectionForceBlack">Indiana</option>
+                        <option value="IA" class="form-dropDownSelectionForceBlack">Iowa</option>
+                        <option value="KS" class="form-dropDownSelectionForceBlack">Kansas</option>
+                        <option value="KY" class="form-dropDownSelectionForceBlack">Kentucky</option>
+                        <option value="LA" class="form-dropDownSelectionForceBlack">Louisiana</option>
+                        <option value="ME" class="form-dropDownSelectionForceBlack">Maine</option>
+                        <option value="MD" class="form-dropDownSelectionForceBlack">Maryland</option>
+                        <option value="MA" class="form-dropDownSelectionForceBlack">Massachusetts</option>
+                        <option value="MI" class="form-dropDownSelectionForceBlack">Michigan</option>
+                        <option value="MN" class="form-dropDownSelectionForceBlack">Minnesota</option>
+                        <option value="MS" class="form-dropDownSelectionForceBlack">Mississippi</option>
+                        <option value="MO" class="form-dropDownSelectionForceBlack">Missouri</option>
+                        <option value="MT" class="form-dropDownSelectionForceBlack">Montana</option>
+                        <option value="NE" class="form-dropDownSelectionForceBlack">Nebraska</option>
+                        <option value="NV" class="form-dropDownSelectionForceBlack">Nevada</option>
+                        <option value="NH" class="form-dropDownSelectionForceBlack">New Hampshire</option>
+                        <option value="NJ" class="form-dropDownSelectionForceBlack">New Jersey</option>
+                        <option value="NM" class="form-dropDownSelectionForceBlack">New Mexico</option>
+                        <option value="NY" class="form-dropDownSelectionForceBlack">New York</option>
+                        <option value="NC" class="form-dropDownSelectionForceBlack">North Carolina</option>
+                        <option value="ND" class="form-dropDownSelectionForceBlack">North Dakota</option>
+                        <option value="OH" class="form-dropDownSelectionForceBlack">Ohio</option>
+                        <option value="OK" class="form-dropDownSelectionForceBlack">Oklahoma</option>
+                        <option value="OR" class="form-dropDownSelectionForceBlack">Oregon</option>
+                        <option value="PA" class="form-dropDownSelectionForceBlack">Pennsylvania</option>
+                        <option value="PR" class="form-dropDownSelectionForceBlack">Puerto Rico</option>
+                        <option value="RI" class="form-dropDownSelectionForceBlack">Rhode Island</option>
+                        <option value="SC" class="form-dropDownSelectionForceBlack">South Carolina</option>
+                        <option value="SD" class="form-dropDownSelectionForceBlack">South Dakota</option>
+                        <option value="TN" class="form-dropDownSelectionForceBlack">Tennessee</option>
+                        <option value="TX" class="form-dropDownSelectionForceBlack">Texas</option>
+                        <option value="UT" class="form-dropDownSelectionForceBlack">Utah</option>
+                        <option value="VT" class="form-dropDownSelectionForceBlack">Vermont</option>
+                        <option value="VA" class="form-dropDownSelectionForceBlack">Virginia</option>
+                        <option value="WA" class="form-dropDownSelectionForceBlack">Washington</option>
+                        <option value="WV" class="form-dropDownSelectionForceBlack">West Virginia</option>
+                        <option value="WI" class="form-dropDownSelectionForceBlack">Wisconsin</option>
+                        <option value="WY" class="form-dropDownSelectionForceBlack">Wyoming</option>
+                     </select>
+                  </div>
+               </div>
+               <div style="float: left;">
+                  <label for="addressFormInlineZip">ZIP / POSTAL CODE<span class="asterisk">*</span></label>
+                  <div style="margin-top: 6px; width: 140px">
+                     <input id="addressFormInlineZip" name="addressFormInlineZip" class="zipField" type="text" maxlength="10" style="width: 100px" title="overall type: ADDRESS_HOME_ZIP
+                        server type: ADDRESS_HOME_ZIP
+                        heuristic type: ADDRESS_HOME_ZIP
+                        label: ZIP / POSTAL CODE*
+                        parseable name: addressFormInlineZip
+                        field signature: 3060672026
+                        form signature: 16870043504464996221" autofill-prediction="ADDRESS_HOME_ZIP">
+                  </div>
+               </div>
+            </div>
+            <div id="phoneNumber" style="margin-top: 15px;">
+               <label for="addressFormInlinePhoneNumber">PHONE NUMBER<span class="asterisk">*</span></label>
+               <div style="margin-top: 6px;">
+                  <input id="addressFormInlinePhoneNumber" name="addressFormInlinePhoneNumber" type="text" maxlength="32" style="width: 200px;" title="overall type: PHONE_HOME_CITY_AND_NUMBER
+                     server type: PHONE_HOME_CITY_AND_NUMBER
+                     heuristic type: PHONE_HOME_WHOLE_NUMBER
+                     label: PHONE NUMBER*
+                     parseable name: addressFormInlinePhoneNumber
+                     field signature: 1198968276
+                     form signature: 16870043504464996221" autofill-prediction="PHONE_HOME_CITY_AND_NUMBER">
+               </div>
+            </div>
+            <div id="email" style="margin-top: 15px;">
+               <label for="addressFormInlineEmail" id="addressFormInlineEmailLabel">EMAIL<span class="asterisk">*</span></label>		
+               <div style="margin-top: 6px;">
+                  <input id="addressFormInlineEmail" name="addressFormInlineEmail" type="text" maxlength="40" style="width: 200px;" value="formautofilltester@gmail.com" title="overall type: EMAIL_ADDRESS
+                     server type: EMAIL_ADDRESS
+                     heuristic type: EMAIL_ADDRESS
+                     label: EMAIL*
+                     parseable name: addressFormInlineEmail
+                     field signature: 2460631353
+                     form signature: 16870043504464996221" autofill-prediction="EMAIL_ADDRESS">
+               </div>
+            </div>
+            <div id="addressNickname" style="margin-top: 15px;">
+               <label for="addressFormInlineAddressNickName">ADDRESS NICKNAME<span class="asterisk">*</span><span class="has-tooltip html-tooltip nickname-tooltip">&nbsp;<span class="tooltip">?</span></span><span class="tooltip">The Address Nickname is a short name you create to help you easily identify this address within your address book.</span></label>
+               <div style="margin-top: 6px;">
+                  <input id="addressFormInlineAddressNickName" name="addressFormInlineAddressNickName" type="text" maxlength="35" placeholder="Holly at school, Mom, etc." style="width: 265px;" title="overall type: UNKNOWN_TYPE
+                     server type: NO_SERVER_DATA
+                     heuristic type: UNKNOWN_TYPE
+                     label: ADDRESS NICKNAME* The Address Nickname is a short name you create to help you easily identify this a
+                     parseable name: addressFormInlineAddressNickName
+                     field signature: 2948011243
+                     form signature: 16870043504464996221" autofill-prediction="UNKNOWN_TYPE">
+               </div>
+            </div>
+            <div style="margin-top: 25px;">
+               <input name="saveAddressCheckboxInline" id="saveAddressCheckboxInline" type="checkbox" onclick="javascript:AddressForm.enableSetDefaultInline()" title="overall type: UNKNOWN_TYPE
+                  server type: NO_SERVER_DATA
+                  heuristic type: UNKNOWN_TYPE
+                  label: Add to address book.
+                  parseable name: saveAddressCheckboxInline
+                  field signature: 3323717546
+                  form signature: 16870043504464996221" autofill-prediction="UNKNOWN_TYPE" checked="checked">
+               <label for="saveAddressCheckboxInline">Add to address book. </label>
+            </div>
+            <div style="margin-top: 6px;">
+               <input name="setDefaultCheckboxInline" id="setDefaultCheckboxInline" type="checkbox" title="overall type: UNKNOWN_TYPE
+                  server type: NO_SERVER_DATA
+                  heuristic type: UNKNOWN_TYPE
+                  label: Save as default shipping address in Address Book
+                  parseable name: setDefaultCheckboxInline
+                  field signature: 2923970107
+                  form signature: 16870043504464996221" autofill-prediction="UNKNOWN_TYPE">
+               <label for="setDefaultCheckboxInline" id="setDefaultCheckboxInlineLabel">Save as default billing address in Address Book</label>
+            </div>
+            <div id="defaultAddressChangeInline" style="display:none; padding-top:10px !important">
+               <!-- BEGIN ContentAreaESpot.jsp -->
+               <div class="genericESpot" id="WC_ContentAreaESpot_div_1_rx-DefaultAddrConfirm">
+                  <div class="caption" style="display:none" id="WC_ContentAreaESpot_div_2_rx-DefaultAddrConfirm">[rx-DefaultAddrConfirm]</div>
+                  <div class="featureAllItems">
+                     <ul class="featureItemsTable">
+                        <li value="1">
+                           <!-- Stores\WebContent\CostcoGLOBALSAS\Snippets\Marketing\ESpot\RenderESpotContent.jspf -->You are changing your Costco Default Shipping Address. &nbsp;All future orders from Costco.com, including Pharmacy Prescription Orders, will be sent to this Address.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- END ContentAreaESpot.jsp -->
+            </div>
+            <div id="button-container" style="margin-top: 25px; height: 51px;">
+               <div style="text-align: left; /* margin: 13px 16px */">
+                  <div style="display: inline-block;">
+                     <button id="addressFormInlineButton" type="button" class="submit costco-button" style="display: none" onclick="javascript:AddressForm.interfaces.add(false,successfulAddressCallback)"><span class="s1"><span class="s2">Save Address</span></span></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+      <div class="col-md-6 col-xl-3 hidden-xs hidden-sm" id="footer-find-warehouse-block">
+         <label for="footer-search-field" class="control-label">Find a Warehouse</label>
+         <form id="WarehouseSearchForm" action="https://www.costco.com/warehouse-locations" novalidate="novalidate" class="form-group">
+            <div class="inner-addon right-addon">
+               <i class="co-search-thin" onclick="$(&#39;#WarehouseSearchForm&#39;).submit()"></i>
+               <input id="footer-search-field" type="search" name="location" tabindex="1" class="form-control" placeholder="City, state or zip" value="" title="Search">
+               <input type="submit" id="searchClear" class="hide" value="Clear" style="">
+               <input type="hidden" id="fromWLocSubmit" name="fromWLocSubmit" value="true">
+               <input type="hidden" id="numOfWarehouses" name="numOfWarehouses" value="10">
+            </div>
+         </form>
+      </div>
+      <div class="col-md-6 col-xl-3" id="footer-email-offers-block">
+         <label for="footer-email-offers">Get Email Offers</label>
+         <form title="" action="https://www.costco.com/EmailSubscription" class="validate" id="EmailOffersForm" onsubmit="event.preventDefault(); COSTCO.util.signupFormValidation(this);">
+            <div class="input-group">
+               <input type="text" name="emailSignUp" id="footer-email-offers" class="form-control" placeholder="Enter your email">
+               <span class="input-group-btn">
+               <button class="btn btn-primary" type="submit" alt="Go">Go</button>
+               </span>
+            </div>
+         </form>
+      </div>
+      <input type="hidden" name="typeAheadDisabled" id="typeAheadDisabled" value="false">
+   </body>
+</html>
+
