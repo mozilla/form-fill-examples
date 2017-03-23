@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="generator" content=
+         "HTML Tidy for HTML5 for Mac OS X version 5.4.0">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Sign In</title>
+      <meta name="currentBuildNumber" content="3.0.29057.0">
+      <meta name="ServerName" content="www.costco.com">
+      <meta name="LocalAddress" content="xxx.xxx.xxx.48">
+      <meta name="LocalName" content="TP26">
+   </head>
+   <body class="no-breadcrumbs"
+      waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2=
+      "SA password protect entry checker">
+      <form class="CatalogSearchForm" action=
+         "https://www.costco.com/CatalogSearch" onsubmit=
+         "COSTCO.Header.page_size.call(this);">
+         <input type="submit" value=
+            "Submit" class="hide"> <label for="search-field" class=
+            "control-label hide">Search</label>
+         <div class="inner-addon right-addon">
+            <label class="hide">Search
+            Icon</label> <span class="twitter-typeahead" style=/"position: relative; display: inline-block;">
+            <input type="text"
+               tabindex="-1" class="form-control typeahead tt-hint" title="Search"
+               readonly autocomplete="off" spellcheck="false" dir="ltr">
+            <input id="search-field" type="text" name="keyword" tabindex="1"
+               class="form-control typeahead tt-input" placeholder="Search Costco"
+               title="Search" autocomplete="off" spellcheck="false" dir="auto"
+               style="position: relative; vertical-align: top; background-color: transparent;">
+            </span>
+            <div class="tt-menu">
+               <div class="tt-dataset tt-dataset-search"></div>
+            </div>
+         </div>
+         <input type="submit" value="Submit"
+            tabindex="-1">
+      </form>
+      <form id="warehouse_locator_search" action='https://www.costco.com/warehouse-locations'>
+         <div class="inner-addon right-addon">
+            <input id="warehouse-search-field" class="form-control" title="Warehouse Search Field" name="location" type="search" value=""/>
+         </div>
+         <input type="hidden" name="tiresCheckout" value="" />
+         <input type="hidden" name="orderitemId" value="" />
+         <input type="hidden" name="storeId" value="10301" />
+         <input type="hidden" name="catalogId" value="10701" />
+         <input type="hidden" name="fromPage" value="" />
+         <label for="locator_search_filters">Show Warehouses with:</label>       
+         <div id="locator_search_filters" class="row">
+            <div class="col-xs-6 form-group">
+               <div class="style-check">
+                  <input id="hasGas" type="checkbox" name="hasGas" value="true" title="Gas Station"  />
+                  <label for="hasGas" title="Gas Station" class=""><i class="wl-gas-station"></i>
+                  <span>Gas Station</span>
+                  </label>
+               </div>
+               <div class="style-check">
+                  <input id="hasTires" type="checkbox" name="hasTires" value="true" title="Tire Service"   />
+                  <label for="hasTires" title="Tire Service" class=""><i class="wl-tire-center"></i>
+                  <span>Tire Center</span>
+                  </label>
+               </div>
+               <div class="style-check">
+                  <input id="hasFood" type="checkbox" name="hasFood" value="true" title="Food Court"  />
+                  <label for="hasFood" title="Food Court" class=""><i class="wl-food-court"></i>
+                  <span>Food Court</span>
+                  </label>
+               </div>
+               <div class="style-check">
+                  <input id="hasHearing" type="checkbox" name="hasHearing" value="true" title="Hearing Aids"  />
+                  <label for="hasHearing" title="Hearing Aids" class=""><i class="wl-hearing-aid"></i>
+                  <span>Hearing Aids</span>
+                  </label>
+               </div>
+            </div>
+            <div class="col-xs-6 form-group">
+               <div class="style-check">
+                  <input id="hasOptical" type="checkbox" name="hasOptical" value="true" title="Optical Dept" />
+                  <label for="hasOptical" title="Optical Dept" class=""><i class="wl-optical"></i>
+                  <span>Optical</span>
+                  </label>
+               </div>
+               <div class="style-check">
+                  <input id="hasPharmacy" type="checkbox" name="hasPharmacy" value="true" title="Pharmacy"  />
+                  <label for="hasPharmacy" title="Pharmacy" class=""><i class="wl-rx"></i>
+                  <span>Pharmacy</span>
+                  </label>
+               </div>
+               <div class="style-check">
+                  <input id="hasBusiness" type="checkbox" name="hasBusiness" value="true" title="Business"  />
+                  <label for="hasBusiness" title="Business" class=""><i class="wl-business"></i>
+                  <span>Business Center</span>
+                  </label>
+               </div>
+            </div>
+         </div>
+         <input type="hidden" id="fromWLocSubmit" name="fromWLocSubmit" value="true" />
+         <input type="hidden" id="numOfWarehouses" name="numOfWarehouses" value="10" />
+         <input type="submit" class="primary" value="Find a Warehouse"/>
+      </form>
+      <div id="email-offer-popover-container">
+         <label for="header_emailSignUpEmail">Get Email Offers</label>
+         <label>Sign up for great offers from Costco.com!</label>
+         <form title="" action="/EmailSubscription" class="validate" id="header_emailSignup" onsubmit="event.preventDefault(); COSTCO.util.signupFormValidation(this);">
+            <div class="input-group">
+               <input id="header_emailSignUpEmail" type="text" name="emailSignUp" class="form-control" placeholder="Enter your email">
+               <span class="input-group-btn">
+               <button class="btn btn-secondary" type="submit" alt="Go">Go</button>
+               </span>
+            </div>
+         </form>
+      </div>
+      <form action="https://www.costco.com/Logoff?URL=TopCategoriesDisplay">
+         <li>
+            <input type="submit" class="primary" value="Sign Out"/>
+         </li>
+      </form>
+      <form action="/EmailSubscription" onsubmit="event.preventDefault(); COSTCO.util.signupFormValidation(this);">
+         <div>
+            <label for="modal_email_offers">Sign up for great offers from Costco.com!</label>
+            <input type="text" id="modal_email_offers" name="emailSignUp" class="form-control" placeholder="Enter your email"/>
+         </div>
+      </form>
+      <form title="" name="LogonForm" method="post" action=
+         "https://www.costco.com/Logon" id="LogonForm">
+         <input type="hidden"
+            name="storeId" value="10301" id=
+            "WC_AccountDisplay_FormInput_storeId_In_Logon_1"> <input type=
+            "hidden" name="catalogId" value="10701" id=
+            "WC_AccountDisplay_FormInput_catalogId_In_Logon_1"> <input type=
+            "hidden" name="langId" value="-1" id=
+            "WC_AccountDisplay_FormInput_langId_In__1"> <input type="hidden"
+            name="reLogonURL" value="LogonForm" id=
+            "WC_AccountDisplay_FormInput_reLogonURL_In_Logon_1"> <input type=
+            "hidden" name="isPharmacy" value="" id=
+            "WC_AccountDisplay_FormInput_isPharmacy_In_Logon_1"> <input type=
+            "hidden" name="authToken" value=
+            "312404731%2cKsqvty%2bpMJ%2bCAl3XeIkCxSEgLa4%3d"> <input type=
+            "hidden" name="URL" value=
+            "CheckOutCmd?orderId=644156669&amp;storeId=10301&amp;storeId=10301&amp;authToken=312404731%252cKsqvty%252bpMJ%252bCAl3XeIkCxSEgLa4%253d&amp;authToken=312404731%252cKsqvty%252bpMJ%252bCAl3XeIkCxSEgLa4%253d&amp;orderErrMsgObj=%7B%7D&amp;itemMessage=1.0&amp;langId=-1&amp;langId=-1&amp;catalogId=10701&amp;catalogId=10701"
+            id="WC_AccountDisplay_FormInput_URL_In_Logon_1">
+         <h2>Registered Shoppers</h2>
+         <p>Please provide your email address and password to access your
+            account.†
+         </p>
+         <!-- Defect - CIS100068778 : tooltip added for each input -->
+         <div class="form-item"><label for="logonId">Email
+            Address<span class="asterisk">*</span></label> <input id="logonId"
+               aria-describedby="logonId_validation" name="logonId" maxlength=
+               "254" type="text" title="Email Address" value=""><br>
+         </div>
+         <div class="form-item">
+            <label for=
+               "logonPassword">Password:<span class="asterisk">*</span></label>
+            <input name="logonPassword" aria-describedby=
+               "logonPassword_validation" id="logonPassword" maxlength="40" type=
+               "password" autocomplete="off" title="Password:">
+            <p class="inline-col2">Passwords are case sensitive.</p>
+            <br>
+         </div>
+         <div class="form-item">
+            <input id="option1" name="option1" type=
+               "checkbox"> <label for="option1">Remember me</label>
+         </div>
+         <input type="hidden" name="submitButton" value="signIn">
+         <div class="form-item"><button type="submit" class=
+            "submit costco-button" title="Sign in"><span class=
+            "s1"><span class="s2">Sign in</span></span></button></div>
+      </form>
+      <!-- Sign In ends here--><!-- Forget Password starts here-->
+      <form title="Reset password" name="ResetPasswordForm" method="post"
+         action="https://www.costco.com/ResetPassword" id=
+         "ResetPasswordForm">
+         <input type="hidden" name="challengeAnswer"
+            value="-" id=
+            "WC_PasswordResetForm_FormInput_challengeAnswer_In__1">
+         <input type="hidden" name="storeId" value="10301" id=
+            "WC_PasswordResetForm_FormInput_storeId_In__1"> <input type=
+            "hidden" name="catalogId" value="10701" id=
+            "WC_PasswordResetForm_FormInput_catalogId_In__1"> <input type=
+            "hidden" name="langId" value="-1" id=
+            "WC_PasswordResetForm_FormInput_langId_In__1"> <input type="hidden"
+            name="state" value="passwdconfirm" id=
+            "WC_PasswordResetForm_FormInput_state_In__1"> <input type="hidden"
+            name="URL" value="ResetPasswordSuccessView" id=
+            "WC_PasswordResetForm_FormInput_URL_In__1"> <input type="hidden"
+            name="errorViewName" value="RememberMeLogonFormView" id=
+            "WC_PasswordResetForm_FormInput_errorViewName_In__1"> <input type=
+            "hidden" name="subject" value="New Costco.com Password" id=
+            "WC_PasswordResetForm_FormInput_subject_In__1"> <input type=
+            "hidden" name="sender" value="no-reply@costco.com" id=
+            "WC_PasswordResetForm_FormInput_sender_In__1"> <input type="hidden"
+            name="isPharmacy" value="" id=
+            "WC_PasswordResetForm_FormInput_isPharmacy_In_Logon_1">
+         <h2>Forgot Your Password?</h2>
+         <p>To reset your password, enter the email address associated with
+            your Costco.com account. Instructions to create a new password will
+            be sent to your address.
+         </p>
+         <div class="form-item"><label for="forgotPassword_email">Email
+            address<span class="asterisk">*</span></label> <input id=
+               "forgotPassword_email" aria-describedby=
+               "forgotPassword_email_validation" name="logonId" type="text" title=
+               "Email address">
+         </div>
+         <input type="hidden" name="submitButton" value="forgotPassword">
+         <div class="form-item"><button type="submit" class=
+            "submit costco-button" title="Reset password"><span class=
+            "s1"><span class="s2">Reset password</span></span></button></div>
+      </form>
+      <form title="" name="RegisterForm" method="post" action=
+         "https://www.costco.com/UserRegistrationAdd" id="RegisterForm">
+         <input type="hidden" name="new" value="Y" id=
+            "WC_UserRegistrationAddForm_FormInput_new_In_Register_1">
+         <input type="hidden" name="storeId" value="10301" id=
+            "WC_UserRegistrationAddForm_FormInput_storeId_In_Register_1">
+         <input type="hidden" name="catalogId" value="10701" id=
+            "WC_UserRegistrationAddForm_FormInput_catalogId_In_Register_1">
+         <input type="hidden" name="langId" value="-1" id=
+            "WC_UserRegistrationAddForm_FormInput_langId_In__1"> <input type=
+            "hidden" name="URL" value=
+            "CheckOutCmd?orderId=644156669&amp;storeId=10301&amp;storeId=10301&amp;authToken=312404731%252cKsqvty%252bpMJ%252bCAl3XeIkCxSEgLa4%253d&amp;authToken=312404731%252cKsqvty%252bpMJ%252bCAl3XeIkCxSEgLa4%253d&amp;orderErrMsgObj=%7B%7D&amp;itemMessage=1.0&amp;langId=-1&amp;langId=-1&amp;catalogId=10701&amp;catalogId=10701"
+            id="WC_UserRegistrationAddForm_FormInput_URL_In_Register_1">
+         <input type="hidden" name="userField1" value="" id=
+            "WC_UserRegistrationAddForm_FormInput_userField1_In_Register_1">
+         <input type="hidden" name="addressField1" value="" id=
+            "WC_UserRegistrationAddForm_FormInput_addressField1_In_Register_1">
+         <input type="hidden" name="addressType" value="B" id=
+            "WC_UserRegistrationAddForm_FormInput_addressType_In_Register_1">
+         <input type="hidden" name="nickName" value="Self Address" id=
+            "WC_UserRegistrationAddForm_FormInput_nickName_In_Register_1">
+         <input type="hidden" name="errorViewName" value="LogonForm" id=
+            "WC_UserRegistrationAddForm_FormInput_errorViewName_In_Register_1">
+         <input type="hidden" name="validated" id="validated" value="true">
+         <input type="hidden" name="primary" value="false" id=
+            "WC_UserRegistrationAddForm_FormInput_primary_In_Register_1">
+         <input type="hidden" name="challengeQuestion" value="-" id=
+            "WC_UserRegistrationAddForm_FormInput_challengeQuestion_In_Register_1">
+         <input type="hidden" name="challengeAnswer" value="-" id=
+            "WC_UserRegistrationAddForm_FormInput_challengeAnswer_In_Register_1">
+         <input type="hidden" name="fromPage" value="LogonForm" id=
+            "WC_UserRegistrationAddForm_FormInput_fromPage_In_Register_1">
+         <input type="hidden" name="isPharmacy" value="" id=
+            "WC_UserRegistrationAddForm_FormInput_isPharmacy_In_Logon_1">
+         <input type="hidden" name="page" value="account" id=
+            "WC_UserRegistrationAddForm_FormInput_page_In_Register_1">
+         <input type="hidden" name="parentMember" value=
+            "o=costco us bc sellers,o=costco na sellers,o=extended sites seller organization,o=root organization">
+         <!-- Defect - CIS100068778 : tooltip added for each input -->
+         <h2>Not yet registered for Costco.com?</h2>
+         <p>Enter your email address and create a password below to
+            register.†
+         </p>
+         <div class="form-item"><span class="asterisk">*</span> Required
+            fields
+         </div>
+         <div class="form-item"><label for="register_email1">Email
+            Address<span class="asterisk">*</span></label> <input id=
+               "register_email1" aria-describedby="register_email1_validation"
+               name="email1" type="text" maxlength="40" title=
+               "overall type: EMAIL_ADDRESS server type: EMAIL_ADDRESS heuristic type: EMAIL_ADDRESS label: Email Address* parseable name: email1 field signature: 1119374200 form signature: 14385182823106756929"
+               value="" autofill-prediction="EMAIL_ADDRESS">
+         </div>
+         <div class="form-item" id="passwordField">
+            <label for=
+               "register_logonPassword">Password:</label> <input id=
+               "register_logonPassword" aria-describedby=
+               "register_logonPassword_validation" name="logonPassword" maxlength=
+               "20" type="password" class="passwordField" onpaste="return false"
+               value="" title=
+               "overall type: ACCOUNT_CREATION_PASSWORD server type: ACCOUNT_CREATION_PASSWORD heuristic type: UNKNOWN_TYPE label: Password: parseable name: logonPassword field signature: 354853082 form signature: 14385182823106756929"
+               autofill-prediction="ACCOUNT_CREATION_PASSWORD">
+            <div class="short" id="PasswordStrength">
+               <img src="./Sign%20In_files/Password_Strength_Arrow.png" class=
+                  "carrot">
+               <div class="passwordContainer">
+                  <p class="header">Password must meet the following:</p>
+                  <div class="passwordHelp">
+                     <ul class="conditions">
+                        <li class="chars">Use between 8 and 20 characters</li>
+                        <li class="letters">Include at least one letter</li>
+                        <li class="special">Does not contain blank spaces or the following
+                           special characters: &lt; &gt; " \ .
+                        </li>
+                        <li class="match">Passwords match</li>
+                     </ul>
+                  </div>
+                  <p class="passwordHelpHeader">Password Strength : <span id=
+                     "strengthText"></span></p>
+                  <ul class="state">
+                     <li class="short">Too Short</li>
+                     <li class="weak">Weak</li>
+                     <li class="fair">Fair</li>
+                     <li class="good">Good</li>
+                     <li class="strong">Strong</li>
+                  </ul>
+                  <p id="passwordStrengthBar"></p>
+                  <p class="passwordHelp">To improve strength, increase password
+                     length and use capital letters, numbers, and special characters
+                     (except &lt; &gt; " \ .)
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="form-item"><label for=
+            "register_logonPasswordVerify">Confirm Password<span class=
+            "asterisk">*</span></label> <input id=
+            "register_logonPasswordVerify" aria-describedby=
+            "register_logonPasswordVerify_validation" name=
+            "logonPasswordVerify" maxlength="20" type="password" class=
+            "passwordConfirmField" onpaste="return false" value="" title=
+            "overall type: UNKNOWN_TYPE server type: NO_SERVER_DATA heuristic type: UNKNOWN_TYPE label: Confirm Password* parseable name: logonPasswordVerify field signature: 1976176530 form signature: 14385182823106756929"
+            autofill-prediction="UNKNOWN_TYPE"></div>
+         <div class="form-item"><label for="register_userField2">Costco
+            Membership Number</label> <input id="register_userField2"
+               aria-describedby="register_userField2_validation" name="userField2"
+               type="text" maxlength="16" title=
+               "overall type: UNKNOWN_TYPE server type: NO_SERVER_DATA heuristic type: UNKNOWN_TYPE label: Costco Membership Number parseable name: userField2 field signature: 1051463506 form signature: 14385182823106756929"
+               value="" autofill-prediction="UNKNOWN_TYPE">
+         </div>
+         <p class="inline-col2"><b>Non-members may be assessed an additional
+            surcharge. The surcharge does not apply to prescription items.
+            Executive Members need to provide a membership number to receive
+            credit for their 2% rebate.</b>
+         </p>
+         <div class="form-item sendMeEmail">
+            <input id="register_sendMeEmail"
+               aria-describedby="register_sendMeEmail_validation" name=
+               "sendMeEmail" type="checkbox" checked="checked" title=
+               "overall type: UNKNOWN_TYPE server type: NO_SERVER_DATA heuristic type: UNKNOWN_TYPE label: Yes, I would like to receive emails about special offers and new product information from Costco. Co parseable name: sendMeEmail field signature: 3147026083 form signature: 14385182823106756929"
+               autofill-prediction="UNKNOWN_TYPE"> <label for=
+               "register_sendMeEmail" class="checkbox-label">Yes, I would like to
+            receive emails about special offers and new product information
+            from Costco. Costco will not rent or sell your email
+            address.</label>
+         </div>
+         <input name="submitButton" value="Register" type="hidden">
+         <div class="form-item"><button type="submit" class=
+            "submit costco-button" title="Register"><span class=
+            "s1"><span class="s2">Register</span></span></button></div>
+      </form>
+      <form action="https://www.costco.com/EmailSubscription" class=
+         "validate" id="footer_emailSignup" name="footer_emailSignup">
+         <input id="footer_emailSignUpEmail" name="emailSignUp" type=
+            "text">
+      </form>
+      <div id="language-region-modal-container">
+         <div class="title">
+            ???LANGUAGE_REGION_MODAL_TITLE???
+         </div>
+         <div class="text">
+            <div id="language-radio-buttons">
+               <p>???LANGUAGE_REGION_MODAL_CHOOSE_LANGUAGE???</p>
+               <label>
+               <input type="radio" name="language" value="-1">???HEADER_LANGUAGE_NAME_-1???</label>
+            </div>
+            <hr>
+            <div id="region-radio-buttons">
+               <p>???LANGUAGE_REGION_MODAL_CHOOSE_REGION???</p>
+               <div class="col-xs-12 col-md-6">
+                  <label class="show">
+                  <input type="radio" name="region" value="AB">Alberta - AB</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="BC">British Columbia - BC</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="MB">Manitoba - MB</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="NB">New Brunswick - NB</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="NL">Newfoundland and Labrador - NL</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="NT">Northwest Territories - NT</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="NS">Nova Scotia - NS</label>
+               </div>
+               <div class="col-xs-12 col-md-6">
+                  <label class="show">
+                  <input type="radio" name="region" value="NU">Nunavut - NU</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="ON">Ontario - ON</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="PE">Prince Edward Island - PE</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="QC">Quebec - QC</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="SK">Saskatchewan - SK</label>
+                  <label class="show">
+                  <input type="radio" name="region" value="YT">Yukon - YT</label>
+               </div>
+            </div>
+            <div class="modal-buttons">
+               <input id="language-region-set" type="submit" value="???LANGUAGE_REGION_MODAL_SUBMIT???" class="secondary">
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+
