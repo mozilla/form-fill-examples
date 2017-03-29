@@ -59,27 +59,27 @@ var NameUtils = {
   ],
 
   CJK_RANGE: [
-    "\u1100–\u11FF", // Hangul Jamo
+    "\u1100-\u11FF", // Hangul Jamo
     "\u3040-\u309F", // Hiragana
-    "\u30A0–\u30FF", // Katakana
+    "\u30A0-\u30FF", // Katakana
     "\u3105-\u312C", // Bopomofo
-    "\u3130–\u318F", // Hangul Compatibility Jamo
-    "\u31F0–\u31FF", // Katakana Phonetic Extensions
-    "\u3200–\u32FF", // Enclosed CJK Letters and Months
+    "\u3130-\u318F", // Hangul Compatibility Jamo
+    "\u31F0-\u31FF", // Katakana Phonetic Extensions
+    "\u3200-\u32FF", // Enclosed CJK Letters and Months
     "\u3400-\u4DBF", // CJK unified ideographs Extension A
     "\u4E00-\u9FFF", // CJK Unified Ideographs
-    "\uA960–\uA97F", // Hangul Jamo Extended-A
-    "\uAC00–\uD7AF", // Hangul Syllables
-    "\uD7B0–\uD7FF", // Hangul Jamo Extended-B
-    "\uFF00–\uFFEF", // Halfwidth and Fullwidth Forms
+    "\uA960-\uA97F", // Hangul Jamo Extended-A
+    "\uAC00-\uD7AF", // Hangul Syllables
+    "\uD7B0-\uD7FF", // Hangul Jamo Extended-B
+    "\uFF00-\uFFEF", // Halfwidth and Fullwidth Forms
   ],
 
   HANGUL_RANGE: [
-    "\u1100–\u11FF", // Hangul Jamo
-    "\u3130–\u318F", // Hangul Compatibility Jamo
-    "\uA960–\uA97F", // Hangul Jamo Extended-A
-    "\uAC00–\uD7AF", // Hangul Syllables
-    "\uD7B0–\uD7FF", // Hangul Jamo Extended-B
+    "\u1100-\u11FF", // Hangul Jamo
+    "\u3130-\u318F", // Hangul Compatibility Jamo
+    "\uA960-\uA97F", // Hangul Jamo Extended-A
+    "\uAC00-\uD7AF", // Hangul Syllables
+    "\uD7B0-\uD7FF", // Hangul Jamo Extended-B
   ],
 
   // The common and non-ambiguous CJK surnames (last names) that have more than
