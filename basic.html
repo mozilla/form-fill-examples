@@ -3,35 +3,48 @@
 <head>
   <meta charset="utf-8">
   <title>Form Autofill Demo Page</title>
+  <style>
+    label {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      width: 18em;
+      text-align: right;
+    }
+</style>
 </head>
 <body>
   <h1>Form Autofill Demo Page</h1>
+
   <form id="form">
-    <p><label>givenName: <input type="text" id="given-name" name="given-name" autocomplete="given-name" autofocus></label></p>
-    <p><label>additionalName: <input type="text" id="additional-name" name="additional-name" autocomplete="additional-name"></label></p>
-    <p><label>familyName: <input type="text" id="family-name" name="family-name" autocomplete="family-name"></label></p>
-    <p><label>name: <input type="text" id="name" name="name" autocomplete="name"></label></p>
-    <p><label>organization: <input type="text" id="organization" name="organization" autocomplete="organization"></label></p>
-    <p><label>streetAddress: <input type="text" id="street-address" name="street-address" autocomplete="street-address"></label></p>
-    <p><label>addressLine1: <input type="text" id="address-line1" name="address-line1" autocomplete="address-line1"></label></p>
-    <p><label>addressLine2: <input type="text" id="address-line2" name="address-line2" autocomplete="address-line2"></label></p>
-    <p><label>addressLine3: <input type="text" id="address-line3" name="address-line3" autocomplete="address-line3"></label></p>
-    <p><label>addressLevel2: <input type="text" id="address-level2" name="address-level2" autocomplete="address-level2"></label></p>
-    <p><label>addressLevel1: <input type="text" id="address-level1" name="address-level1" autocomplete="address-level1"></label></p>
-    <p><label>postalCode: <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code"></label></p>
-    <p><label>country: <input type="text" id="country" name="country" autocomplete="country"></label></p>
-    <p><label>tel: <input type="text" id="tel" name="tel" autocomplete="tel"></label></p>
-    <p><label>email: <input type="text" id="email" name="email" autocomplete="email"></label></p>
-    <p><input type="submit"></p>
-    <p><button type="reset">Reset</button></p>
+    <label>Given Name: <input autocomplete="given-name" autofocus></label>
+    <label>Additional Name: <input autocomplete="additional-name"></label>
+    <label>Family Name: <input autocomplete="family-name"></label>
+    <label>Name: <input autocomplete="name"></label>
+    <label>Organization: <input autocomplete="organization"></label>
+    <label>Street Address: <input autocomplete="street-address"></label>
+    <label>Address Line 1: <input autocomplete="address-line1"></label>
+    <label>Address Line 2: <input autocomplete="address-line2"></label>
+    <label>Address Line 3: <input autocomplete="address-line3"></label>
+    <label>Address Level 2: <input autocomplete="address-level2"></label>
+    <label>Address Level 1: <input autocomplete="address-level1"></label>
+    <label>Postal Code: <input autocomplete="postal-code"></label>
+    <label>Country: <input autocomplete="country"></label>
+    <label>Telephone: <input autocomplete="tel"></label>
+    <label>Email: <input autocomplete="email"></label>
+    <p>
+      <input type="submit" value="Submit">
+      <button type="reset">Reset</button>
+    </p>
   </form>
 
   <p><button id="btn">Add new input</button></p>
 
+  <h2>Login form</h2>
   <form>
-    <p><input type="text" id="username" name="username"></p>
-    <p><input type="password" id="password" name="password"></p>
-    <p><input type="submit"></p>
+    <label>Username: <input autocomplete="username"></label>
+    <label>Current Password: <input type="password" autocomplete="current-password"></label>
+    <p><input type="submit" value="Login"></p>
   </form>
 
   <script>
