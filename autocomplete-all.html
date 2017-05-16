@@ -2,16 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Form Autofill Demo: Basic @autocomplete</title>
+  <title>Form Autofill Demo: All supported @autocomplete</title>
   <link rel="stylesheet" href="css/base.css"/>
 </head>
 <body>
-  <h1>Form Autofill Demo: Basic @autocomplete</h1>
+  <h1>Form Autofill Demo: All supported @autocomplete</h1>
 
   <form class="alignedLabels">
+    <label>Given Name: <input autocomplete="given-name" autofocus></label>
+    <label>Additional Name: <input autocomplete="additional-name"></label>
+    <label>Family Name: <input autocomplete="family-name"></label>
     <label>Name: <input autocomplete="name"></label>
     <label>Organization: <input autocomplete="organization"></label>
     <label>Street Address: <input autocomplete="street-address"></label>
+    <label>Address Line 1: <input autocomplete="address-line1"></label>
+    <label>Address Line 2: <input autocomplete="address-line2"></label>
+    <label>Address Line 3: <input autocomplete="address-line3"></label>
     <label>Address Level 2: <input autocomplete="address-level2"></label>
     <label>Address Level 1: <input autocomplete="address-level1"></label>
     <label>Postal Code: <input autocomplete="postal-code"></label>
@@ -22,6 +28,13 @@
       <input type="submit" value="Submit">
       <button type="reset">Reset</button>
     </p>
+  </form>
+
+  <h2>Login form</h2>
+  <form class="alignedLabels">
+    <label>Username: <input autocomplete="username"></label>
+    <label>Current Password: <input type="password" autocomplete="current-password"></label>
+    <p><input type="submit" value="Login"></p>
   </form>
 </body>
 </html>

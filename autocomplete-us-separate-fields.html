@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Autofill Demo: U.S. @autocomplete</title>
+  <link rel="stylesheet" href="css/base.css"/>
+</style>
+</head>
+<body>
+  <h1>Form Autofill Demo: U.S. @autocomplete</h1>
+
+  <form class="alignedLabels">
+    <label>Given Name: <input autocomplete="given-name" autofocus></label>
+    <label>Additional Name: <input autocomplete="additional-name"></label>
+    <label>Family Name: <input autocomplete="family-name"></label>
+    <label>Organization: <input autocomplete="organization"></label>
+    <label>Address Line 1: <input autocomplete="address-line1"></label>
+    <label>Address Line 2: <input autocomplete="address-line2"></label>
+    <label>Address Line 3: <input autocomplete="address-line3"></label>
+    <label>City: <input autocomplete="address-level2"></label>
+    <label>State: <input autocomplete="address-level1"></label>
+    <label>ZIP Code: <input autocomplete="postal-code"></label>
+    <label>Country: <input autocomplete="country"></label>
+    <label>Telephone: <input autocomplete="tel-country-code" size="2"><input autocomplete="tel-area-code" size="3" maxlength="3"><input autocomplete="tel-local-prefix" size="3" maxlength="3"><input autocomplete="tel-local-suffix" size="4" maxlength="4">
+    </label>
+    <label>Email: <input autocomplete="email"></label>
+    <p>
+      <input type="submit" value="Submit">
+      <button type="reset">Reset</button>
+    </p>
+  </form>
+</body>
+</html>
