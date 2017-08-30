@@ -8,23 +8,46 @@
 <body>
   <h1>Form Autofill Demo: All supported @autocomplete</h1>
 
+  <h2>Address form</h2>
   <form class="alignedLabels">
-    <label>Given Name: <input autocomplete="given-name" autofocus></label>
-    <label>Additional Name: <input autocomplete="additional-name"></label>
-    <label>Family Name: <input autocomplete="family-name"></label>
-    <label>Name: <input autocomplete="name"></label>
-    <label>Organization: <input autocomplete="organization"></label>
-    <label>Street Address: <input autocomplete="street-address"></label>
-    <label>Address Line 1: <input autocomplete="address-line1"></label>
-    <label>Address Line 2: <input autocomplete="address-line2"></label>
-    <label>Address Line 3: <input autocomplete="address-line3"></label>
-    <label>Address Level 2: <input autocomplete="address-level2"></label>
-    <label>Address Level 1: <input autocomplete="address-level1"></label>
-    <label>Postal Code: <input autocomplete="postal-code"></label>
-    <label>Country: <input autocomplete="country"></label>
-    <label>Country Name: <input autocomplete="country-name"></label>
-    <label>Telephone: <input autocomplete="tel"></label>
-    <label>Email: <input autocomplete="email"></label>
+    <label>given-name: <input autocomplete="given-name" autofocus></label>
+    <label>additional-name: <input autocomplete="additional-name"></label>
+    <label>family-name: <input autocomplete="family-name"></label>
+    <label>name: <input autocomplete="name"></label>
+    <label>organization: <input autocomplete="organization"></label>
+    <label>street-address: <input autocomplete="street-address"></label>
+    <label>address-line1: <input autocomplete="address-line1"></label>
+    <label>address-line2: <input autocomplete="address-line2"></label>
+    <label>address-line3: <input autocomplete="address-line3"></label>
+    <label>address-line3: <input autocomplete="address-line3"></label>
+    <label>address-level1: <input autocomplete="address-level1"></label>
+    <label>postal-code: <input autocomplete="postal-code"></label>
+    <label>country: <input autocomplete="country"></label>
+    <label>country-name: <input autocomplete="country-name"></label>
+    <label>tel: <input autocomplete="tel"></label>
+    <label>tel-country-code: <input autocomplete="tel-country-code"></label>
+    <label>tel-national: <input autocomplete="tel-national"></label>
+    <label>tel-area-code: <input autocomplete="tel-area-code"></label>
+    <label>tel-local: <input autocomplete="tel-local"></label>
+    <label>tel-local-prefix: <input autocomplete="tel-local-prefix"></label>
+    <label>tel-local-suffix: <input autocomplete="tel-local-suffix"></label>
+    <label>email: <input autocomplete="email"></label>
+    <p>
+      <input type="submit" value="Submit">
+      <button type="reset">Reset</button>
+    </p>
+  </form>
+
+  <h2>Credit card form</h2>
+  <form class="alignedLabels">
+    <label>cc-name: <input autocomplete="cc-name" autofocus></label>
+    <label>cc-given-name: <input autocomplete="cc-given-name"></label>
+    <label>cc-additional-name: <input autocomplete="cc-additional-name"></label>
+    <label>cc-family-name: <input autocomplete="cc-family-name"></label>
+    <label>cc-number: <input autocomplete="cc-number"></label>
+    <label>cc-exp-month: <input autocomplete="cc-exp-month"></label>
+    <label>cc-exp-year: <input autocomplete="cc-exp-year"></label>
+    <label>cc-exp: <input autocomplete="cc-exp"></label>
     <p>
       <input type="submit" value="Submit">
       <button type="reset">Reset</button>
@@ -33,8 +56,8 @@
 
   <h2>Login form</h2>
   <form class="alignedLabels">
-    <label>Username: <input autocomplete="username"></label>
-    <label>Current Password: <input type="password" autocomplete="current-password"></label>
+    <label>username: <input autocomplete="username"></label>
+    <label>current-password: <input type="password" autocomplete="current-password"></label>
     <p><input type="submit" value="Login"></p>
   </form>
 </body>
