@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Autofill Demo: Basic Credit Card @autocomplete</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <style>
+    td {
+      padding: 0.4em 0.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Credit Card</h1>
+  <form>
+    <table>
+      <tr>
+        <td>
+          Card Holder Name:
+        </td>
+        <td>
+          <input type="text" autocomplete="cc-name" style="width: 120px;">
+        </td>
+        <td>
+          Security Code:
+        </td>
+        <td>
+          <input type="text" autocomplete="cc-csc" style="width: 50px;">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Card Number:
+        </td>
+        <td>
+          <input type="text" autocomplete="cc-number" style="width: 180px;">
+        </td>
+        <td>
+          Expiry Date:
+        </td>
+        <td>
+          <select autocomplete="cc-exp-month">
+            <option value="">MM</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select> /
+          <select autocomplete="cc-exp-year">
+            <option value="">YYYY</option>
+            <option value="17">2017</option>
+            <option value="18">2018</option>
+            <option value="19">2019</option>
+            <option value="20">2020</option>
+            <option value="21">2021</option>
+            <option value="22">2022</option>
+            <option value="23">2023</option>
+            <option value="24">2024</option>
+            <option value="25">2025</option>
+            <option value="26">2026</option>
+            <option value="27">2027</option>
+            <option value="28">2028</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="Submit" style="margin-top: 1em;">
+  </form>
+</body>
+</html>
