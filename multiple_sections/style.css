@@ -1,0 +1,67 @@
+.section {
+  width: 400px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px gray solid;
+}
+.section::before {
+  display: block;
+  font-weight: bold;
+}
+
+.section-a {
+  background-color: #ffeeff;
+}
+.section-a::before {
+  content: "Section-A";
+}
+
+.section-b {
+  background-color: #ffffee;
+}
+.section-b::before {
+  content: "Section-B";
+}
+
+.section-c {
+  background-color: #eeffff;
+}
+.section-c::before {
+  content: "Section-C";
+}
+
+.section-d {
+  background-color: #eeeeff;
+}
+.section-d::before {
+  content: "Section-D";
+}
+
+.section-e {
+  background-color: #ffeeee;
+}
+.section-e::before {
+  content: "Section-E";
+}
+
+.section-f {
+  background-color: #eeffee;
+}
+.section-f::before {
+  content: "Section-F";
+}
+
+.section-g {
+  background-color: #ffaaff;
+}
+.section-g::before {
+  content: "Section-G";
+}
+
+.section-h {
+  background-color: #ffaaff;
+}
+.section-h::before {
+  content: "Section-H";
+}
+

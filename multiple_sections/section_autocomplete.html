@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Autofill Demo Page</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="../base.js"></script>
+</head>
+<body>
+  <h1>Form Autofill - Section Test Page [Autocomplete]</h1>
+  <form>
+    <div class="section section-a">
+      <label>Name: <input id="name" autocomplete="name"></label><br/>
+      <label>Organization: <input id="organization" autocomplete="organization"></label><br/>
+    </div>
+
+    <div class="section section-b">
+      <label>Street Address: <input id="street-address-a" autocomplete="shipping street-address"></label><br/>
+      <label>Address Level 2: <input id="address-level2-a" autocomplete="shipping address-level2"></label><br/>
+      <label>Address Level 1: <input id="address-level1-a" autocomplete="shipping address-level1"></label><br/>
+      <label>Postal Code: <input id="postal-code-a" autocomplete="shipping postal-code"></label><br/>
+      <label>Country: <input id="country-a" autocomplete="shipping country"></label><br/>
+    </div>
+
+    <div class="section section-c">
+      <label>Street Address: <input id="street-address-b" autocomplete="billing street-address"></label><br/>
+      <label>Address Level 2: <input id="address-level2-b" autocomplete="billing address-level2"></label><br/>
+      <label>Address Level 1: <input id="address-level1-b" autocomplete="billing address-level1"></label><br/>
+      <label>Postal Code: <input id="postal-code-b" autocomplete="billing postal-code"></label><br/>
+      <label>Country: <input id="country-b" autocomplete="billing country"></label><br/>
+    </div>
+
+    <div class="section section-d">
+      <label>Street Address: <input id="street-address-c" autocomplete="section-my street-address"></label><br/>
+      <label>Address Level 2: <input id="address-level2-c" autocomplete="section-my address-level2"></label><br/>
+      <label>Address Level 1: <input id="address-level1-c" autocomplete="section-my address-level1"></label><br/>
+      <label>Postal Code: <input id="postal-code-c" autocomplete="section-my postal-code"></label><br/>
+      <label>Country: <input id="country-c" autocomplete="section-my country"></label><br/>
+    </div>
+
+    <div class="section section-a">
+      <p>This section is recognized as Section A as well since both of them are without the section part in autocomplete attribute.</p>
+      <label>Telephone: <input id="tel-a" autocomplete="work tel"></label><br/>
+      <label>Email: <input id="email-a" autocomplete="work email"></label><br/>
+    </div>
+
+    <div class="section section-e">
+      <p>This section contains the duplicated fields, so the two fields can not be filled even they have the different `contactType`.</p>
+      <label>Telephone: <input id="tel-b" autocomplete="home tel"></label><br/>
+      <label>Email: <input id="email-b" autocomplete="home email"></label><br/>
+    </div>
+
+    <div class="section section-f">
+      <label>Card Holder Name: <input autocomplete="section-card1 cc-name"></label><br/>
+      <label>Card Number: <input autocomplete="section-card1 cc-number"></label><br/>
+      <label>Exp Month: <input autocomplete="section-card1 cc-exp-month"></label><br/>
+      <label>Exp Year: <input autocomplete="section-card1 cc-exp-year"></label><br/>
+    </div>
+
+    <div class="section section-g">
+      <label>Card Holder Name: <input autocomplete="section-card2 cc-name"></label><br/>
+      <label>Card Number: <input autocomplete="section-card2 cc-number"></label><br/>
+      <label>Exp Month: <input autocomplete="section-card2 cc-exp-month"></label><br/>
+      <label>Exp Year: <input autocomplete="section-card2 cc-exp-year"></label><br/>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+</html>
+
