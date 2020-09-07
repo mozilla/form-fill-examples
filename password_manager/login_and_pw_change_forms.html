@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration, Login and Change Forms</title>
+</head>
+<body>
+  <div id="noShadow">
+    <form action="success.html" method="POST">
+      <h2>Registration form:</h2>
+      <input name="u" placeholder=username />
+      <input name="p" type=password placeholder=new-password autocomplete=new-password />
+      <input type=submit value="Register"> <a href="success.html">Register</a>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>Login form:</h2>
+      <input name="u" placeholder=username />
+      <input name="p" type=password placeholder=current-password autocomplete=current-password />
+      <input type=submit value="Log In"/>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>Password-Only Login form:</h2>
+      <input name="p" type=password placeholder=current-password autocomplete=current-password />
+      <input type=submit value="Log In"/>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>Password change form:</h2>
+      <input type=hidden value="username1"/>
+      <input type=password placeholder=current-password autocomplete=current-password />
+      <input type=password placeholder=new-password autocomplete=new-password />
+      <input type=password placeholder=new-password autocomplete=new-password />
+      <input type=submit value="Change password"/>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>5 Password form:</h2>
+      <input type=password />
+      <input type=password />
+      <input type=password />
+      <input type=password />
+      <input type=password />
+      <input type=submit value="Do Something"/>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>Server-filled password form:</h2>
+      <input type=password value="oldpassword" />
+      <input type=password />
+      <input type=submit value="Do Something"/>
+    </form>
+
+    <form action="success.html" method="POST">
+      <h2>Server-filled username form:</h2>
+      <input value="myusername" autocomplete="username" />
+      <input type=password autocomplete="current-password" />
+      <input type=submit value="Do Something"/>
+    </form>
+  </div>
+
+  <h2>HTTP Authentication</h2>
+  <a>Basic Authentication</a> on this domain. (Username: user; Password: password) (BROKEN: Can't do this with github.io)
+
+  <hr/>
+  <h1>Inside a single Shadow Root</h1>
+  <div id="shadow"></div>
+  <script>
+    let noShadow = document.getElementById("noShadow");
+    let shadow = document.getElementById("shadow");
+    shadow.attachShadow({mode: "open"}).appendChild(noShadow.cloneNode(true));
+  </script>
+
+  <hr/>
+  <h1>Form contents inside a Shadow Root</h1>
+  <div id="shadow-inside-form"></div>
+  <script>
+    let section = document.getElementById("shadow-inside-form");
+    for (let formLike of noShadow.querySelectorAll("form")) {
+      let newForm = formLike.cloneNode(true);
+      let wrapper = document.createElement("div");
+      let shadow = wrapper.attachShadow({mode: "open"});
+      shadow.append(...[...newForm.children]);
+      newForm.append(wrapper);
+      section.appendChild(newForm);
+    }
+
+  </script>
+
+</body>
+</html>
