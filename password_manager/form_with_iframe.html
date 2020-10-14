@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Form with Iframe Loading a Cross-Origin Login Form</title>
+</head>
+<body>
+  <form action="success.html" method="POST">
+    <h2>Login form:</h2>
+    <input name="u" placeholder=username />
+    <input name="p" type=password placeholder=current-password autocomplete=current-password />
+    <input type=submit value="Log In"/>
+  </form>
+
+  <!-- The src value can be edited in DevTools via the Console by selecting the <iframe> in the Inspector,
+    and then entering e.g. `$0.src = "https://example.com"` (without the backticks). Note that many
+    websites block being loaded in an iframe by using the X-Frame-Options header. -->
+  <iframe src="https://bugs.mattn.ca/pwmgr/login_and_change_form.html"></iframe>
+
+</body>
+</html>
