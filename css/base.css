@@ -1,7 +1,18 @@
 .alignedLabels > label {
   display: block;
   margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-end: 1.5em;
   width: 25em;
   text-align: right;
+  padding:2px;
+  margin-left: 10px;
+
+
+}
+.btn-reset{
+  margin-left: 10px;
+  
+}
+.submit-btn{
+  margin-left: 17%;
 }

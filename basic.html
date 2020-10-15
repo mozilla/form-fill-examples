@@ -10,18 +10,18 @@
   <h1>Form Autofill Demo: Basic @autocomplete</h1>
 
   <form class="alignedLabels">
-    <label>Name: <input autocomplete="name"></label>
-    <label>Organization: <input autocomplete="organization"></label>
-    <label>Street Address: <input autocomplete="street-address"></label>
-    <label>Address Level 2: <input autocomplete="address-level2"></label>
-    <label>Address Level 1: <input autocomplete="address-level1"></label>
-    <label>Postal Code: <input autocomplete="postal-code"></label>
-    <label>Country (2-digit abbreviation): <input autocomplete="country" maxlength="2"></label>
-    <label>Email: <input autocomplete="email"></label>
-    <label>Telephone: <input autocomplete="tel"></label>
+    <label>Name: <input autocomplete="name" placeholder="Enter your name"></label>
+    <label>Organization: <input autocomplete="organization" placeholder="Enter your Org."></label>
+    <label>Street Address: <input autocomplete="street-address" placeholder="Street-Address"></label>
+    <label>Address Level 2: <input autocomplete="address-level2" placeholder="Address - 2"></label>
+    <label>Address Level 1: <input autocomplete="address-level1" placeholder="Address - 1"></label>
+    <label>Postal Code: <input autocomplete="postal-code" placeholder="Postal-code"></label>
+    <label>Country (2-digit abbreviation): <input autocomplete="country" maxlength="2" placeholder="country-code"></label>
+    <label>Email: <input autocomplete="email" type="email" placeholder="eg: xyz@gmail.com"></label>
+    <label>Telephone: <input autocomplete="tel" type="number" placeholder="Phone-number"></label>
     <p>
-      <input type="submit" value="Submit">
-      <button type="reset">Reset</button>
+      <input type="submit" value="Submit" class="submit-btn" type="submit">
+      <button type="reset" class="btn-reset">Reset</button>
     </p>
   </form>
 </body>
