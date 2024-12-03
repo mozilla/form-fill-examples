@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="css/base.css"/>
 </head>
 <body>
-    <h2>Registration form with email as username:</h2>
+    <h2>Registration form with username & password:</h2>
     <h4>The relay entry should be displayed alongside the login list if a login is saved for this site.</h4>
-    <form class="alignedLabels" action="success.html" method="GET">
-      <label>email: <input name="e" type="email" autocomplete="username" /></label>
-      <label>password: <input name="p" type="passowrd" autocomplete="new-password" /></label>
+    <form name="signup" class="alignedLabels" action="success.html" method="GET">
+      <label>email: <input name="e" type="email" autocomplete="email" /></label>
+      <label>password: <input name="p" type="password" autocomplete="new-password" /></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
@@ -19,12 +19,10 @@
       </label>
     </form>
 
-    <h2>Registration form with email & username:</h2>
+    <h2>Registration form with only an email field:</h2>
     <h4>The relay entry should be displayed alongside form history entries if the user has saved form history for this input.</h4>
-    <form class="alignedLabels" action="success.html" method="GET">
+    <form name="signup" class="alignedLabels" action="success.html" method="GET">
       <label>email: <input name="e" type="email" autocomplete="email" /></label>
-      <label>usename: <input name="u" autocomplete="username" /></label>
-      <label>passowrd: <input name="p" type="passowrd" autocomplete="new-password"/></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
@@ -34,12 +32,11 @@
 
     <h2>Registration form with address fields:</h2>
     <h4>The relay entry should be displayed alongside saved address entries if the user has a saved address record.</h4>
-    <form class="alignedLabels" action="success.html" method="GET">
+    <form name="signup" class="alignedLabels" action="success.html" method="GET">
       <label>email: <input name="e" type="email" autocomplete="email" /></label>
       <label>name: <input autocomplete="name"></label>
       <label>organization: <input autocomplete="organization"></label>
       <label>street-address: <input autocomplete="street-address"></label>
-      <label>password: <input name="p" type="passowrd" autocomplete="new-password" /></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
@@ -68,9 +65,9 @@
 
     const inputs = form.querySelectorAll('input');
     inputs.forEach(input => {
-      const autocompleteType = input.getAttribute('autocomplete');
-      if (autocompleteType && autofillData[autocompleteType]) {
-        input.value = autofillData[autocompleteType];
+      const type = input.getAttribute('autocomplete');
+      if (type && autofillData[type]) {
+        input.value = autofillData[type];
       }
     });
   }
