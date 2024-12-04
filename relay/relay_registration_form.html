@@ -10,8 +10,8 @@
     <h2>Registration form with username & password:</h2>
     <h4>The relay entry should be displayed alongside the login list if a login is saved for this site.</h4>
     <form name="signup" class="alignedLabels" action="success.html" method="GET">
-      <label>email: <input name="e" type="email" autocomplete="email" /></label>
-      <label>password: <input name="p" type="password" autocomplete="new-password" /></label>
+      <label>email: <input name="e" type="email" autocomplete="email" size="30"/></label>
+      <label>password: <input name="p" type="password" autocomplete="new-password" size="30"/></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
@@ -22,7 +22,7 @@
     <h2>Registration form with only an email field:</h2>
     <h4>The relay entry should be displayed alongside form history entries if the user has saved form history for this input.</h4>
     <form name="signup" class="alignedLabels" action="success.html" method="GET">
-      <label>email: <input name="e" type="email" autocomplete="email" /></label>
+      <label>email: <input name="e" type="email" autocomplete="email" size="30"/></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
@@ -33,10 +33,10 @@
     <h2>Registration form with address fields:</h2>
     <h4>The relay entry should be displayed alongside saved address entries if the user has a saved address record.</h4>
     <form name="signup" class="alignedLabels" action="success.html" method="GET">
-      <label>email: <input name="e" type="email" autocomplete="email" /></label>
-      <label>name: <input autocomplete="name"></label>
-      <label>organization: <input autocomplete="organization"></label>
-      <label>street-address: <input autocomplete="street-address"></label>
+      <label>email: <input name="e" type="email" autocomplete="email" size="30"/></label>
+      <label>name: <input autocomplete="name" size="30"></label>
+      <label>organization: <input autocomplete="organization" size="30"></label>
+      <label>street-address: <input autocomplete="street-address" size="30"></label>
       <label>
         <input type=submit value="Register">
         <button type=button onclick="onFillInClicked(this)">Fill Form</button>
