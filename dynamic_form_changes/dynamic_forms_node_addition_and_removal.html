@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Autofill Demo: Dynamic Forms</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1 1 calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            appearance: none; /* Remove default styling */
+            background: white;
+        }
+
+        input:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        #address-form, #cc-extra-fields {
+            flex: 1 1 100%;
+            background-color: #f7f7f7;
+            border-left: 4px solid #2196F3;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <h2>Dynamic Address Form (Node Additions/Removals)</h2>
+
+    <!-- Address Form -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="" selected>Select Country</option>
+                <option value="us">United States</option>
+                <option value="de">Germany</option>
+            </select>
+        </div>
+
+        <div id="address-form"></div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <!-- Credit Card Form -->
+    <h2>Dynamic Credit Card Form (Node Additions/Removals)</h2>
+    <form>
+        <div class="form-group">
+            <label for="cc-number">Credit Card Number</label>
+            <input type="text" id="cc-number" name="cc-number" autocomplete="cc-number">
+        </div>
+
+        <div id="cc-extra-fields"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Script -->
+    <script>
+        const ccNumberInput = document.getElementById('cc-number');
+        const ccExtraFields = document.getElementById('cc-extra-fields');
+        const countrySelect = document.getElementById('country');
+        const addressForm = document.getElementById('address-form');
+
+        // Event Listeners
+        ccNumberInput.addEventListener('input', updateCreditCardFields);
+        countrySelect.addEventListener('change', updateAddressForm);
+
+        // Dynamic Credit Card Fields
+        function updateCreditCardFields() {
+            clearFields(ccExtraFields);
+
+            const value = ccNumberInput.value.trim();
+            if (/^\d{16}$/.test(value)) {
+                createField(ccExtraFields, 'cc-name', 'Cardholder Name', 'text', 'cc-name');
+                createSelectField(ccExtraFields, 'cc-expiry-month', 'Expiry Month', [
+                    '', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'
+                ]);
+                createSelectField(ccExtraFields, 'cc-expiry-year', 'Expiry Year', [
+                    '', '2025', '2026', '2027', '2028', '2029', '2030'
+                ]);
+                createField(ccExtraFields, 'cc-code', 'Security Code', 'text', 'cc-csc');
+            }
+        }
+
+        // Dynamic Address Fields
+        function updateAddressForm() {
+            clearFields(addressForm);
+
+            if (countrySelect.value === 'us') {
+                createField(addressForm, 'us-street', 'Street', 'text', 'address-line1');
+                createField(addressForm, 'us-city', 'City', 'text', 'address-level2');
+                createField(addressForm, 'us-state', 'State', 'text', 'address-level1');
+                createField(addressForm, 'us-zip', 'ZIP Code', 'text', 'postal-code');
+            } else if (countrySelect.value === 'de') {
+                createField(addressForm, 'de-street', 'Street', 'text', 'address-line1');
+                createField(addressForm, 'de-city', 'City', 'text', 'address-level2');
+                createField(addressForm, 'de-zip', 'ZIP Code', 'text', 'postal-code');
+            }
+        }
+
+        // Helper Functions
+        function clearFields(container) {
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+        }
+
+        function createField(parent, id, labelContent, type, autocomplete) {
+            const formGroup = document.createElement('div');
+            formGroup.className = 'form-group';
+
+            const label = document.createElement('label');
+            label.setAttribute('for', id);
+            label.textContent = labelContent;
+
+            const input = document.createElement('input');
+            input.type = type;
+            input.id = id;
+            input.name = id;
+            input.autocomplete = autocomplete;
+
+            formGroup.append(label, input);
+            parent.appendChild(formGroup);
+        }
+
+        function createSelectField(parent, id, labelContent, options) {
+            const formGroup = document.createElement('div');
+            formGroup.className = 'form-group';
+
+            const label = document.createElement('label');
+            label.setAttribute('for', id);
+            label.textContent = labelContent;
+
+            const select = document.createElement('select');
+            select.id = id;
+            select.name = id;
+
+            options.forEach(optionValue => {
+                const option = document.createElement('option');
+                option.value = optionValue;
+                option.textContent = optionValue || 'Select';
+                select.appendChild(option);
+            });
+
+            formGroup.append(label, select);
+            parent.appendChild(formGroup);
+        }
+    </script>
+</body>
+</html>
